@@ -1,147 +1,94 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 
 interface GapProps {
   className?: string;
 }
 
 const Gap: React.FC<GapProps> = ({ className }) => {
-  const [messageIndex, setMessageIndex] = useState(0);
-  const [opacity, setOpacity] = useState(1);
-  const [email, setEmail] = useState('');
-  
-  const messages = [
-    "List of top 50 active Baltic early stage VCs",
-    "All Baltic female founders who raised capital 2024",
-    "AI-native Baltic startups that secured funding this year"
-  ];
-  
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      // Start fading out
-      setOpacity(0);
-      
-      // Change message after fade out
-      setTimeout(() => {
-        setMessageIndex((prev) => (prev + 1) % messages.length);
-        // Start fading in
-        setOpacity(1);
-      }, 1000);
-    }, 4000); // Total time for each message
-    
-    return () => clearInterval(interval);
-  }, [messages.length]);
-  
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      console.log('Subscribing email:', email);
-      // Here you would typically send this to a backend
-      alert(`Thanks for subscribing with ${email}!`);
-      setEmail('');
+  const strategies = [
+    {
+      title: "Factor Alpha",
+      description: "Long-term equity factor premiums leveraging value, quality, and momentum signals",
+      details: "Systematic exposure to well-documented market factors with enhanced alpha generation"
+    },
+    {
+      title: "Gap Mean-Reversion", 
+      description: "Intraday gap-filling opportunities through systematic pattern recognition",
+      details: "High-frequency strategies targeting price inefficiencies in opening gaps"
+    },
+    {
+      title: "Behavioral Alpha",
+      description: "Exploiting market inefficiencies through behavioral finance insights",
+      details: "AI-driven detection of cognitive biases and sentiment-driven mispricings"
     }
-  };
+  ];
 
-  const statistics = [
+  const infrastructure = [
     {
-      title: "Stagnant Growth",
-      description: "Number of early stage rounds is not growing in the Baltics since 2021"
+      title: "Colocated Smart Order Routers",
+      icon: "⚡"
     },
     {
-      title: "Limited Ecosystem",
-      description: "Total number of startups in Lithuania is stagnant for more than 5 years ~ 800"
+      title: "Web-scraped + Paid Feeds + Tick Data",
+      icon: "📊"
     },
     {
-      title: "Funding Inequality",
-      description: "90% of VC funding still goes to repeat founders and traditional tech backgrounds"
+      title: "GPU + Containerized ML Pipelines", 
+      icon: "🔬"
+    },
+    {
+      title: "Real-time VaR & Scenario Engines",
+      icon: "🛡️"
     }
   ];
 
   return (
-    <section id="gap" className={cn('py-20 bg-gray-50', className)}>
+    <section id="strategy" className={cn('py-20 md:py-32 bg-background', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
-            <h2 className="text-3xl md:text-4xl font-serif mb-8 text-center">The Gap</h2>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-8 text-center">
+              Our Investment Approach
+            </h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-xl text-center mb-8">
-              Narrow founder pipeline - missed opportunities, slow growth
+            <p className="text-xl text-center text-muted-foreground mb-12">
+              Three systematic strategies powered by behavioral insights and advanced infrastructure
             </p>
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-20">
-          {statistics.map((stat, index) => (
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          {strategies.map((strategy, index) => (
             <FadeIn key={index} delay={150 + index * 50}>
-              <Card className="border-0 shadow-sm h-full">
+              <Card className="border border-border h-full bg-card">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-medium mb-3 font-serif">{stat.title}</h3>
-                  <p className="text-muted-foreground">{stat.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-bai-gold">{strategy.title}</h3>
+                  <p className="text-muted-foreground mb-4">{strategy.description}</p>
+                  <p className="text-sm text-muted-foreground/80">{strategy.details}</p>
                 </CardContent>
               </Card>
             </FadeIn>
           ))}
         </div>
-        
-        <div className="relative max-w-full mx-auto">
-          <FadeIn delay={200}>
-            <div className="relative">
-              <div className="w-full h-[500px] overflow-hidden">
-                <img 
-                  src="/lovable-uploads/dabbf929-5dd0-4794-a011-fe43bf4b3418.png" 
-                  alt="Beautiful orangery with palm trees and plants" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30"></div>
-              </div>
-              
-              {/* Centered newsletter box overlaid on the image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-md max-w-md w-full mx-4">
-                  <h3 className="text-2xl font-serif mb-6 text-center">Subscribe for Updates</h3>
-                  
-                  <div className="flex justify-center mb-6">
-                    <Button 
-                      variant="outline" 
-                      className="bg-orangery-500/10 text-orangery-700 border-orangery-200 hover:bg-orangery-500/20 min-h-[3.5rem] min-w-[220px] md:min-w-[280px]"
-                    >
-                      <span 
-                        className="transition-opacity duration-1000 ease-in-out"
-                        style={{ opacity: opacity }}
-                      >
-                        {messages[messageIndex]}
-                      </span>
-                    </Button>
-                  </div>
-                  
-                  <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
-                    <Input 
-                      type="email" 
-                      placeholder="Enter your email" 
-                      className="text-gray-800 bg-gray-50/80 border-gray-200 focus-visible:ring-gray-500" 
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
-                    />
-                    <Button 
-                      type="submit" 
-                      className="bg-gray-600 hover:bg-gray-700 text-white"
-                    >
-                      Subscribe
-                    </Button>
-                  </form>
+
+        <FadeIn delay={300}>
+          <div className="bg-card border border-border p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-center">Technical Infrastructure</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {infrastructure.map((item, index) => (
+                <div key={index} className="text-center p-4">
+                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <p className="text-sm text-muted-foreground">{item.title}</p>
                 </div>
-              </div>
+              ))}
             </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

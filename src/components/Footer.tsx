@@ -27,38 +27,49 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   };
 
   return (
-    <footer id="contact" className={cn('py-20 md:py-32 bg-white border-t border-gray-100', className)}>
+    <footer className={cn('py-20 md:py-32 bg-card border-t border-border', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <Link to="/" className="text-xl font-serif font-medium tracking-tight">
-              Orangery Ventures
-            </Link>
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0 flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+              alt="BAI" 
+              className="w-6 h-6"
+            />
+            <span className="text-xl font-sans font-bold">BAI</span>
+            <span className="text-sm text-muted-foreground ml-4">Behavioral Alpha Investments</span>
           </div>
           
           <div className="flex space-x-6 mb-4 md:mb-0">
             <button
-              onClick={() => scrollToSection('home')} 
-              className="text-sm hover:text-orangery-500 transition-colors"
-            >
-              Home
-            </button>
-            <button
               onClick={() => scrollToSection('thesis')} 
-              className="text-sm hover:text-orangery-500 transition-colors"
+              className="text-sm hover:text-bai-gold transition-colors"
             >
-              Thesis
+              Investment Thesis
             </button>
             <button
-              onClick={() => scrollToSection('investment')} 
-              className="text-sm hover:text-orangery-500 transition-colors"
+              onClick={() => scrollToSection('strategy')} 
+              className="text-sm hover:text-bai-gold transition-colors"
             >
-              Investment
+              Strategy
+            </button>
+            <button
+              onClick={() => scrollToSection('technology')} 
+              className="text-sm hover:text-bai-gold transition-colors"
+            >
+              Technology
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')} 
+              className="text-sm hover:text-bai-gold transition-colors"
+            >
+              Contact
             </button>
           </div>
           
-          <div className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Orangery Ventures. All rights reserved.
+          <div className="text-sm text-muted-foreground text-center md:text-right">
+            <div>&copy; {new Date().getFullYear()} BAI. All rights reserved.</div>
+            <div className="text-xs mt-1">Private investment fund. Qualified investors only.</div>
           </div>
         </div>
       </div>

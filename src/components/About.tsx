@@ -9,34 +9,69 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ className }) => {
   return (
-    <section id="about" className={cn('py-20 md:py-32 bg-gray-50', className)}>
+    <section id="about" className={cn('py-20 md:py-32 bg-card', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
-          <FadeIn className="md:col-span-5">
-            <div className="flex flex-col space-y-6">
-              <div>
-                <span className="text-sm md:text-base font-medium text-orangery-500 mb-2 inline-block">About us</span>
-                <h2 className="text-3xl md:text-5xl font-serif font-medium tracking-tight mb-6">We got started 2025 with a single mission</h2>
-              </div>
-              
-              <p className="text-lg text-muted-foreground">
-                To bring a fresh take into Baltic venture ecosystem.
-              </p>
-              <p className="text-lg text-muted-foreground">
-                We are founder-driven and embrace diversity. Orangery brings an inclusive take to venture, inviting and inspiring first-time founders to try tech entrepreneurship.
-              </p>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center">About BAI</h2>
           </FadeIn>
           
-          <FadeIn delay={150} className="md:col-span-7">
-            <div className="relative h-[500px] lg:h-[600px] w-full rounded-lg overflow-hidden">
-              <img 
-                src="/lovable-uploads/47f9a1d0-4458-400a-8fc0-79adf093cf18.png"
-                alt="Interior with palm trees and ornate architecture"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </FadeIn>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <FadeIn delay={100}>
+              <div className="space-y-6">
+                <div>
+                  <span className="text-sm font-medium text-bai-gold mb-2 inline-block">Our Mission</span>
+                  <h3 className="text-2xl font-semibold mb-4">We generate alpha using behavioral insights in our investment process</h3>
+                </div>
+                
+                <p className="text-lg text-muted-foreground">
+                  BAI combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
+                </p>
+                
+                <p className="text-lg text-muted-foreground">
+                  We model cognitive biases, emotional reactions, and sentiment shifts in real time—then execute fully automated strategies to capture excess returns.
+                </p>
+                
+                <div className="pt-4">
+                  <h4 className="text-lg font-semibold mb-3">Our Philosophy</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li>• Research-first approach to investment strategy</li>
+                    <li>• Systematic methodology over discretionary decisions</li>
+                    <li>• Technology-driven execution and risk management</li>
+                    <li>• Continuous innovation in behavioral modeling</li>
+                  </ul>
+                </div>
+              </div>
+            </FadeIn>
+            
+            <FadeIn delay={200}>
+              <div className="bg-background border border-border p-8 space-y-6">
+                <div className="text-center">
+                  <img 
+                    src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+                    alt="BAI Logo"
+                    className="w-16 h-16 mx-auto mb-4 opacity-80"
+                  />
+                  <h4 className="text-xl font-semibold mb-2">Culture & Values</h4>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h5 className="font-medium text-bai-gold">Research Excellence</h5>
+                    <p className="text-sm text-muted-foreground">Rigorous scientific approach to market analysis</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-bai-gold">Systematic Innovation</h5>
+                    <p className="text-sm text-muted-foreground">Continuous advancement in behavioral modeling</p>
+                  </div>
+                  <div>
+                    <h5 className="font-medium text-bai-gold">Institutional Quality</h5>
+                    <p className="text-sm text-muted-foreground">Professional risk management and compliance</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </section>

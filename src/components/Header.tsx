@@ -41,18 +41,23 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
-          ? 'py-3 bg-white/90 backdrop-blur-md border-b border-gray-200/20 shadow-sm'
+          ? 'py-3 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm'
           : 'py-5 bg-transparent',
         className
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <NavLink 
-          to="/" 
-          className="text-xl font-serif font-medium tracking-tight transition-opacity hover:opacity-80"
+        <button 
+          onClick={() => scrollToSection('home')}
+          className="flex items-center space-x-3 transition-opacity hover:opacity-80"
         >
-          Orangery Ventures
-        </NavLink>
+          <img 
+            src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+            alt="BAI" 
+            className="w-8 h-8"
+          />
+          <span className="text-xl font-sans font-bold">BAI</span>
+        </button>
         
         <div className="hidden md:flex items-center space-x-8">
           <NavLinks scrollToSection={scrollToSection} />
@@ -76,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       
       <div 
         className={cn(
-          "fixed inset-0 bg-white z-40 flex flex-col pt-24 px-6 transition-transform duration-500 ease-in-out transform md:hidden",
+          "fixed inset-0 bg-background z-40 flex flex-col pt-24 px-6 transition-transform duration-500 ease-in-out transform md:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -90,33 +95,68 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         </button>
         
         <nav className="flex flex-col space-y-6 text-lg">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => cn(
-              "hover:text-orangery-500 transition-colors",
-              isActive && "text-orangery-500 font-semibold"
-            )}
-            onClick={() => setIsMobileMenuOpen(false)}
+          <button 
+            className="text-left hover:text-bai-gold transition-colors"
+            onClick={() => {
+              scrollToSection('home');
+              setIsMobileMenuOpen(false);
+            }}
           >
             Home
-          </NavLink>
+          </button>
           <button 
-            className="text-left hover:text-orangery-500 transition-colors"
+            className="text-left hover:text-bai-gold transition-colors"
             onClick={() => {
               scrollToSection('thesis');
               setIsMobileMenuOpen(false);
             }}
           >
-            Thesis
+            Investment Thesis
           </button>
           <button 
-            className="text-left hover:text-orangery-500 transition-colors"
+            className="text-left hover:text-bai-gold transition-colors"
             onClick={() => {
-              scrollToSection('investment');
+              scrollToSection('strategy');
               setIsMobileMenuOpen(false);
             }}
           >
-            Investment
+            Strategy
+          </button>
+          <button 
+            className="text-left hover:text-bai-gold transition-colors"
+            onClick={() => {
+              scrollToSection('technology');
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            Technology
+          </button>
+          <button 
+            className="text-left hover:text-bai-gold transition-colors"
+            onClick={() => {
+              scrollToSection('team');
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            Team
+          </button>
+          <button 
+            className="text-left hover:text-bai-gold transition-colors"
+            onClick={() => {
+              scrollToSection('about');
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            About
+          </button>
+          <button 
+            className="text-left hover:text-bai-gold transition-colors"
+            onClick={() => {
+              scrollToSection('contact');
+              setIsMobileMenuOpen(false);
+            }}
+          >
+            Contact
           </button>
         </nav>
       </div>
@@ -128,27 +168,29 @@ interface NavLinksProps {
   scrollToSection: (id: string) => void;
 }
 
-const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => (
-  <>
-    <button 
-      className="text-sm font-medium hover:text-orangery-500 transition-colors"
-      onClick={() => scrollToSection('home')}
-    >
-      Home
-    </button>
-    <button 
-      className="text-sm font-medium hover:text-orangery-500 transition-colors"
-      onClick={() => scrollToSection('thesis')}
-    >
-      Thesis
-    </button>
-    <button 
-      className="text-sm font-medium hover:text-orangery-500 transition-colors"
-      onClick={() => scrollToSection('investment')}
-    >
-      Investment
-    </button>
-  </>
-);
+const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => {
+  const navItems = [
+    { id: 'thesis', label: 'Investment Thesis' },
+    { id: 'strategy', label: 'Strategy' },
+    { id: 'technology', label: 'Technology' },
+    { id: 'team', label: 'Team' },
+    { id: 'about', label: 'About' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
+  return (
+    <>
+      {navItems.map((item) => (
+        <button
+          key={item.id}
+          onClick={() => scrollToSection(item.id)}
+          className="text-sm font-medium hover:text-bai-gold transition-colors"
+        >
+          {item.label}
+        </button>
+      ))}
+    </>
+  );
+};
 
 export default Header;
