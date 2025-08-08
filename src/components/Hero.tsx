@@ -18,7 +18,6 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'none' }}
-          poster="/bai-logo-office.jpg"
         >
           <source src="/BAI Logo Office.mp4" type="video/mp4" />
           {/* Fallback gradient if video doesn't load */}
