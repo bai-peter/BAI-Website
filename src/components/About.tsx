@@ -20,7 +20,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
             <FadeIn delay={100}>
               <div className="space-y-6">
                 <div>
-                  <span className="text-sm font-medium text-bai-gold mb-2 inline-block">Our Mission</span>
+                  <span className="text-sm font-medium text-muted-foreground mb-2 inline-block">Our Mission</span>
                   <h3 className="text-2xl font-semibold mb-4">We generate alpha using behavioral insights in our investment process</h3>
                 </div>
                 
@@ -50,22 +50,22 @@ const About: React.FC<AboutProps> = ({ className }) => {
                   <img 
                     src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
                     alt="BAI Logo"
-                    className="w-16 h-16 mx-auto mb-4 opacity-80"
+                    className="w-20 h-auto mx-auto mb-4 opacity-80 object-contain"
                   />
                   <h4 className="text-xl font-semibold mb-2">Culture & Values</h4>
                 </div>
                 
                 <div className="space-y-4">
                   <div>
-                    <h5 className="font-medium text-bai-gold">Research Excellence</h5>
+                    <h5 className="font-medium text-foreground">Research Excellence</h5>
                     <p className="text-sm text-muted-foreground">Rigorous scientific approach to market analysis</p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-bai-gold">Systematic Innovation</h5>
+                    <h5 className="font-medium text-foreground">Systematic Innovation</h5>
                     <p className="text-sm text-muted-foreground">Continuous advancement in behavioral modeling</p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-bai-gold">Institutional Quality</h5>
+                    <h5 className="font-medium text-foreground">Institutional Quality</h5>
                     <p className="text-sm text-muted-foreground">Professional risk management and compliance</p>
                   </div>
                 </div>

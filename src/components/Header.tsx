@@ -41,22 +41,22 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled 
-          ? 'py-3 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm'
-          : 'py-5 bg-transparent',
+          ? 'h-16 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm'
+          : 'h-20 bg-transparent',
         className
       )}
     >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
         <button 
           onClick={() => scrollToSection('home')}
-          className="flex items-center space-x-3 transition-opacity hover:opacity-80"
+          className="flex items-center transition-opacity hover:opacity-80 h-full"
         >
           <img 
             src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
             alt="BAI" 
-            className="w-8 h-8"
+            className="h-12 w-auto object-contain px-2"
+            style={{ maxWidth: 'none' }}
           />
-          <span className="text-xl font-sans font-bold">BAI</span>
         </button>
         
         <div className="hidden md:flex items-center space-x-8">
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         
         <nav className="flex flex-col space-y-6 text-lg">
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('home');
               setIsMobileMenuOpen(false);
@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Home
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('thesis');
               setIsMobileMenuOpen(false);
@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Investment Thesis
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('strategy');
               setIsMobileMenuOpen(false);
@@ -123,7 +123,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Strategy
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('technology');
               setIsMobileMenuOpen(false);
@@ -132,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Technology
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('team');
               setIsMobileMenuOpen(false);
@@ -141,7 +141,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Team
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('about');
               setIsMobileMenuOpen(false);
@@ -150,7 +150,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             About
           </button>
           <button 
-            className="text-left hover:text-bai-gold transition-colors"
+            className="text-left hover:text-foreground transition-colors"
             onClick={() => {
               scrollToSection('contact');
               setIsMobileMenuOpen(false);
@@ -184,7 +184,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => {
         <button
           key={item.id}
           onClick={() => scrollToSection(item.id)}
-          className="text-sm font-medium hover:text-bai-gold transition-colors"
+          className="text-sm font-medium hover:text-foreground transition-colors"
         >
           {item.label}
         </button>

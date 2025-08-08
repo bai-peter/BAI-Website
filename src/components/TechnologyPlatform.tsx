@@ -75,7 +75,7 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
                   <div className="flex items-start space-x-4">
                     <div className="text-2xl">{capability.icon}</div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-3 text-bai-gold">{capability.title}</h3>
+                      <h3 className="text-xl font-semibold mb-3 text-foreground">{capability.title}</h3>
                       <p className="text-muted-foreground">{capability.description}</p>
                     </div>
                   </div>
@@ -91,7 +91,7 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
             <div className="grid md:grid-cols-2 gap-6">
               {infrastructure.map((item, index) => (
                 <div key={index} className="p-4 border border-border/50">
-                  <h4 className="text-lg font-medium mb-2 text-bai-navy">{item.title}</h4>
+                                     <h4 className="text-lg font-medium mb-2 text-foreground">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
               ))}

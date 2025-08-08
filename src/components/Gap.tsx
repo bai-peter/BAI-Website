@@ -67,7 +67,7 @@ const Gap: React.FC<GapProps> = ({ className }) => {
             <FadeIn key={index} delay={150 + index * 50}>
               <Card className="border border-border h-full bg-card">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-bai-gold">{strategy.title}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{strategy.title}</h3>
                   <p className="text-muted-foreground mb-4">{strategy.description}</p>
                   <p className="text-sm text-muted-foreground/80">{strategy.details}</p>
                 </CardContent>

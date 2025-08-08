@@ -13,13 +13,13 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "CIO / LP Relations",
       description: "Macro overlay and institutional structuring. Expertise in portfolio construction and institutional capital management.",
-      image: "/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png"
+      image: "/lovable-uploads/BAI Emblem.png"
     },
     {
       name: "Muhammad Awan", 
       role: "Head of Research / CTO",
       description: "ML, AI, and signal generation. Leading systematic strategy development and technology infrastructure.",
-      image: "/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png"
+      image: "/lovable-uploads/BAI Emblem.png"
     }
   ];
 
@@ -42,16 +42,16 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100}>
               <Card className="border border-border h-full bg-background">
-                <CardContent className="p-8 text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 bg-muted rounded-full flex items-center justify-center">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-16 h-16 object-contain opacity-50"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
-                  <p className="text-bai-gold font-medium mb-4">{member.role}</p>
+                                 <CardContent className="p-8 text-center">
+                   <div className="w-32 h-32 mx-auto mb-6 bg-muted rounded-full flex items-center justify-center">
+                     <img 
+                       src={member.image} 
+                       alt={member.name}
+                       className="w-24 h-24 object-contain opacity-80"
+                     />
+                   </div>
+                   <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
+                                     <p className="text-muted-foreground font-medium mb-4">{member.role}</p>
                   <p className="text-muted-foreground">{member.description}</p>
                 </CardContent>
               </Card>

@@ -27,7 +27,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <FadeIn delay={150}>
               <div className="p-6 border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-bai-gold">BAI (Behavioral Alpha Investments)</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI (Behavioral Alpha Investments)</h3>
                 <p className="text-muted-foreground">
                   The hedge fund entity that deploys capital and generates returns through systematic behavioral insights.
                 </p>
@@ -36,7 +36,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
             
             <FadeIn delay={200}>
               <div className="p-6 border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-bai-gold">BAI Tech (Behavioral Alpha Infrastructure)</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Tech (Behavioral Alpha Infrastructure)</h3>
                 <p className="text-muted-foreground">
                   The proprietary AI-driven technology platform that powers investment decisions and systematic execution.
                 </p>

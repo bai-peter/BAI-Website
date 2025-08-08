@@ -29,39 +29,37 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={cn('py-20 md:py-32 bg-card border-t border-border', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0 flex items-center space-x-3">
+        <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center space-x-3 mb-4 md:mb-0">
             <img 
               src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
               alt="BAI" 
-              className="w-6 h-6"
+              className="w-32 h-auto object-contain"
             />
-            <span className="text-xl font-sans font-bold">BAI</span>
-            <span className="text-sm text-muted-foreground ml-4">Behavioral Alpha Investments</span>
           </div>
           
           <div className="flex space-x-6 mb-4 md:mb-0">
             <button
               onClick={() => scrollToSection('thesis')} 
-              className="text-sm hover:text-bai-gold transition-colors"
+              className="text-sm hover:text-foreground transition-colors"
             >
               Investment Thesis
             </button>
             <button
               onClick={() => scrollToSection('strategy')} 
-              className="text-sm hover:text-bai-gold transition-colors"
+              className="text-sm hover:text-foreground transition-colors"
             >
               Strategy
             </button>
             <button
               onClick={() => scrollToSection('technology')} 
-              className="text-sm hover:text-bai-gold transition-colors"
+              className="text-sm hover:text-foreground transition-colors"
             >
               Technology
             </button>
             <button
               onClick={() => scrollToSection('contact')} 
-              className="text-sm hover:text-bai-gold transition-colors"
+              className="text-sm hover:text-foreground transition-colors"
             >
               Contact
             </button>

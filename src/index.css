@@ -4,39 +4,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Minimal Color Palette - Black, White-Smoke, Battleship Gray */
+    --black: 0 0% 0%;
+    --white-smoke: 0 0% 96%;
+    --battleship-gray: 0 0% 59%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
+    /* Core UI Colors */
+    --background: var(--black);
+    --foreground: var(--white-smoke);
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
+    --card: 0 0% 2%;
+    --card-foreground: var(--white-smoke);
 
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    --popover: 0 0% 2%;
+    --popover-foreground: var(--white-smoke);
 
-    --secondary: 0 0% 75%;
-    --secondary-foreground: 0 0% 0%;
+    --primary: var(--white-smoke);
+    --primary-foreground: var(--black);
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 75%;
+    --secondary: 0 0% 8%;
+    --secondary-foreground: var(--white-smoke);
 
-    --accent: 210 77% 15%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 0 0% 6%;
+    --muted-foreground: var(--battleship-gray);
+
+    --accent: 0 0% 12%;
+    --accent-foreground: var(--white-smoke);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: var(--white-smoke);
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 210 77% 15%;
+    --border: 0 0% 12%;
+    --input: 0 0% 8%;
+    --ring: 0 0% 12%;
 
     --radius: 0.125rem;
 
-    --bai-gold: 43 35% 60%;
-    --bai-navy: 210 77% 15%;
-    --bai-gray: 0 0% 75%;
+    /* Typography Hierarchy */
+    --text-primary: var(--white-smoke);
+    --text-secondary: var(--battleship-gray);
+    --text-muted: 0 0% 45%;
+
+    /* Subtle Accents */
+    --highlight: 0 0% 15%;
+    --divider: 0 0% 8%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
