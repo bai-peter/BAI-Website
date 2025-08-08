@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'none' }}
         >
-          <source src="/BAI-Website/BAI Logo Office.mp4" type="video/mp4" />
+          <source src="/BAI Logo Office.mp4" type="video/mp4" />
           {/* Fallback gradient if video doesn't load */}
         </video>
         

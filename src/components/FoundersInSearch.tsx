@@ -13,13 +13,13 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "CIO / LP Relations",
       description: "Macro overlay and institutional structuring. Expertise in portfolio construction and institutional capital management.",
-      image: "/BAI-Website/lovable-uploads/BAI Emblem.png"
+      image: "/lovable-uploads/BAI Emblem.png"
     },
     {
       name: "Muhammad Awan", 
       role: "Head of Research / CTO",
       description: "ML, AI, and signal generation. Leading systematic strategy development and technology infrastructure.",
-      image: "/BAI-Website/lovable-uploads/BAI Emblem.png"
+      image: "/lovable-uploads/BAI Emblem.png"
     }
   ];
 

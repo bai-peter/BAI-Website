@@ -48,7 +48,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
               <div className="bg-background border border-border p-8 space-y-6">
                 <div className="text-center">
                   <img 
-                    src="/BAI-Website/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+                    src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
                     alt="BAI Logo"
                     className="w-20 h-auto mx-auto mb-4 opacity-80 object-contain"
                   />
