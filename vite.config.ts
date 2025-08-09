@@ -20,7 +20,6 @@ export default defineConfig(({ mode }) => ({
     },
     manifest: true,
     sourcemap: false,
-    minify: 'terser',
     target: 'es2015'
   },
   plugins: [
