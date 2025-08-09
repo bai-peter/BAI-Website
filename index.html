@@ -59,6 +59,21 @@
         console.log('All CSS links:', Array.from(links).map(l => l.href));
         console.log('All script sources:', Array.from(scripts).map(s => s.src));
         
+        // Add error handlers for asset loading failures
+        window.addEventListener('error', function(e) {
+          if (e.target.tagName === 'SCRIPT' || e.target.tagName === 'LINK') {
+            console.log('Asset loading error:', e.target.src || e.target.href);
+            if (e.target.src && e.target.src.includes('/BAI-Website/')) {
+              console.log('Attempting to fix old asset path...');
+              e.target.src = e.target.src.replace('/BAI-Website/', '/');
+            }
+            if (e.target.href && e.target.href.includes('/BAI-Website/')) {
+              console.log('Attempting to fix old asset path...');
+              e.target.href = e.target.href.replace('/BAI-Website/', '/');
+            }
+          }
+        });
+        
         console.log('Redirect script completed');
       })();
     </script>
