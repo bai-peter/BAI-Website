@@ -29,6 +29,15 @@
           window.location.replace(newPath);
         }
         
+        // Test if assets are accessible
+        fetch('/assets/test-asset-access')
+          .then(response => {
+            console.log('Asset access test response:', response.status);
+          })
+          .catch(error => {
+            console.log('Asset access test error:', error);
+          });
+        
         // Force reload of assets if they're cached
         var links = document.querySelectorAll('link[rel="stylesheet"]');
         links.forEach(function(link) {
