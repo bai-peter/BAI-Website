@@ -16,16 +16,28 @@
     
     <script>
       // Embedded redirect script to handle old asset paths
-      (function() {
+      function runRedirectScript() {
         console.log('Redirect script running...');
+        
+        // Update debug indicator
+        var scriptStatus = document.getElementById('script-status');
+        var currentPath = document.getElementById('current-path');
+        var assetsFixed = document.getElementById('assets-fixed');
+        
+        if (scriptStatus) scriptStatus.textContent = 'Running';
+        if (currentPath) currentPath.textContent = window.location.pathname;
+        
         console.log('Current pathname:', window.location.pathname);
         console.log('Current URL:', window.location.href);
         console.log('User Agent:', navigator.userAgent);
+        
+        var fixedCount = 0;
         
         // Check if we're on the old path and redirect
         if (window.location.pathname.includes('/BAI-Website/')) {
           var newPath = window.location.pathname.replace('/BAI-Website/', '/');
           console.log('Redirecting from', window.location.pathname, 'to', newPath);
+          if (scriptStatus) scriptStatus.textContent = 'Redirecting...';
           window.location.replace(newPath);
         }
         
@@ -44,6 +56,7 @@
           if (link.href.includes('/BAI-Website/')) {
             console.log('Updating CSS link from', link.href, 'to', link.href.replace('/BAI-Website/', '/'));
             link.href = link.href.replace('/BAI-Website/', '/');
+            fixedCount++;
           }
         });
         
@@ -52,6 +65,7 @@
           if (script.src.includes('/BAI-Website/')) {
             console.log('Updating script src from', script.src, 'to', script.src.replace('/BAI-Website/', '/'));
             script.src = script.src.replace('/BAI-Website/', '/');
+            fixedCount++;
           }
         });
         
@@ -66,21 +80,68 @@
             if (e.target.src && e.target.src.includes('/BAI-Website/')) {
               console.log('Attempting to fix old asset path...');
               e.target.src = e.target.src.replace('/BAI-Website/', '/');
+              fixedCount++;
             }
             if (e.target.href && e.target.href.includes('/BAI-Website/')) {
               console.log('Attempting to fix old asset path...');
               e.target.href = e.target.href.replace('/BAI-Website/', '/');
+              fixedCount++;
             }
+            if (assetsFixed) assetsFixed.textContent = fixedCount;
           }
         });
         
+        // Monitor DOM changes for new elements with old paths
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+              mutation.addedNodes.forEach(function(node) {
+                if (node.nodeType === 1) { // Element node
+                  if (node.tagName === 'SCRIPT' && node.src && node.src.includes('/BAI-Website/')) {
+                    console.log('New script with old path detected, fixing...');
+                    node.src = node.src.replace('/BAI-Website/', '/');
+                    fixedCount++;
+                  }
+                  if (node.tagName === 'LINK' && node.href && node.href.includes('/BAI-Website/')) {
+                    console.log('New link with old path detected, fixing...');
+                    node.href = node.href.replace('/BAI-Website/', '/');
+                    fixedCount++;
+                  }
+                  if (assetsFixed) assetsFixed.textContent = fixedCount;
+                }
+              });
+            }
+          });
+        });
+        
+        observer.observe(document.documentElement, {
+          childList: true,
+          subtree: true
+        });
+        
+        if (assetsFixed) assetsFixed.textContent = fixedCount;
+        if (scriptStatus) scriptStatus.textContent = 'Complete';
+        
         console.log('Redirect script completed');
-      })();
+      }
+      
+      // Run immediately and also after DOM is loaded
+      runRedirectScript();
+      document.addEventListener('DOMContentLoaded', runRedirectScript);
+      window.addEventListener('load', runRedirectScript);
     </script>
   </head>
 
   <body>
     <div id="root"></div>
+    
+    <!-- Debug indicator -->
+    <div id="debug-info" style="position: fixed; top: 10px; right: 10px; background: #333; color: #fff; padding: 10px; border-radius: 5px; font-family: monospace; font-size: 12px; z-index: 9999;">
+      <div>Redirect Script: <span id="script-status">Loading...</span></div>
+      <div>Current Path: <span id="current-path"></span></div>
+      <div>Assets Fixed: <span id="assets-fixed">0</span></div>
+    </div>
+    
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx?v=20250107"></script>
