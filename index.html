@@ -7,20 +7,60 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <!-- Cache busting timestamp: 2025-01-07T15:30:00Z -->
+    <!-- Cache busting timestamp: 2025-01-07T15:35:00Z -->
     <title>BAI - Behavioral Alpha Investments</title>
     <meta name="description" content="BAI uses artificial intelligence to systematically detect and trade against human behavioral errors in the market." />
     <meta name="author" content="BAI LLC" />
     <meta property="og:image" content="/og-image.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
-    <script src="/redirect.js"></script>
+    
+    <script>
+      // Embedded redirect script to handle old asset paths
+      (function() {
+        console.log('Redirect script running...');
+        console.log('Current pathname:', window.location.pathname);
+        console.log('Current URL:', window.location.href);
+        console.log('User Agent:', navigator.userAgent);
+        
+        // Check if we're on the old path and redirect
+        if (window.location.pathname.includes('/BAI-Website/')) {
+          var newPath = window.location.pathname.replace('/BAI-Website/', '/');
+          console.log('Redirecting from', window.location.pathname, 'to', newPath);
+          window.location.replace(newPath);
+        }
+        
+        // Force reload of assets if they're cached
+        var links = document.querySelectorAll('link[rel="stylesheet"]');
+        links.forEach(function(link) {
+          if (link.href.includes('/BAI-Website/')) {
+            console.log('Updating CSS link from', link.href, 'to', link.href.replace('/BAI-Website/', '/'));
+            link.href = link.href.replace('/BAI-Website/', '/');
+          }
+        });
+        
+        var scripts = document.querySelectorAll('script[src]');
+        scripts.forEach(function(script) {
+          if (script.src.includes('/BAI-Website/')) {
+            console.log('Updating script src from', script.src, 'to', script.src.replace('/BAI-Website/', '/'));
+            script.src = script.src.replace('/BAI-Website/', '/');
+          }
+        });
+        
+        // Log all current asset references
+        console.log('All CSS links:', Array.from(links).map(l => l.href));
+        console.log('All script sources:', Array.from(scripts).map(s => s.src));
+        
+        console.log('Redirect script completed');
+      })();
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx?v=20250107"></script>
+    
     <script>
       // Single Page Apps for GitHub Pages
       // MIT License

@@ -18,7 +18,10 @@ export default defineConfig(({ mode }) => ({
         assetFileNames: `assets/[name]-[hash].[ext]`
       }
     },
-    manifest: true
+    manifest: true,
+    sourcemap: false,
+    minify: 'terser',
+    target: 'es2015'
   },
   plugins: [
     react(),
