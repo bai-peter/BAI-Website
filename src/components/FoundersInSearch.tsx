@@ -16,7 +16,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       fullDescription:
-        "Macro desk quant dev at UPP (FX, Equity TRS, Repo); ex-TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
+        "Peter is an Ivey HBA student at Western University. He was previously a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, futures and repo within a ~$13B AUM portfolio. Before that, he worked in Equity Markets at TMX Group as a quant focused on trading infrastructure and market operations, and in venture capital at HCS Capital investing in insurtech and fintech. Peter leads strategy, macro overlay, and LP relationships at BAI Funds.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -24,7 +24,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       fullDescription:
-        "Founding ML Engineer at Boardy AI; built ML pipelines at UTEX; contributed to WATonomous perception and MIT-PITT-RW path planning. Leads real-time modeling, data pipelines, and execution reliability.",
+        "Muhammad studies Computer Science at the University of Waterloo. He is a Founding Machine Learning Engineer at Boardy AI, where he has built production ML systems; previously he developed ML pipelines at UTEX Scientific Instruments and contributed to perception and path-planning work with WATonomous and MIT-PITT-RW. At BAI Funds, Muhammad leads real-time modeling, data pipelines, and execution reliability across the platform.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -32,7 +32,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       fullDescription:
-        "BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
+        "Josephina is a Schulich Leader Scholar pursuing a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University. She was previously a quantitative analyst on the Electronic Cash Equities desk at BMO Capital Markets and a venture capital analyst at Render Capital. At BAI Funds, Josephina drives industry research, marrying market microstructure insight with thematic analysis to inform signal design.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -40,7 +40,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       fullDescription:
-        "TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation to scale strategies.",
+        "Frank studies Business at Huron University (Western) with Ivey AEO status and is a varsity rower. He worked in Equity Markets at TMX Group as a quantitative analyst focused on product and market structure research. At BAI Funds, Frank leads LP relationships, strategic partnerships, and capital formation to scale systematic strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
