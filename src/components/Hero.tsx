@@ -44,7 +44,15 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </FadeIn>
             
             <FadeIn delay={400}>
-              <button className="bg-accent text-accent-foreground px-8 py-4 text-lg font-medium hover:bg-accent/90 transition-colors">
+              <button 
+                onClick={() => {
+                  const nextSection = document.getElementById('thesis');
+                  if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="bg-accent text-accent-foreground px-8 py-4 text-lg font-medium hover:bg-accent/90 transition-colors"
+              >
                 Learn More
               </button>
             </FadeIn>
