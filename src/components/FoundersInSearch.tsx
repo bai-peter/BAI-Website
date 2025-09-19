@@ -32,7 +32,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       fullDescription:
-        "Josephina is a Schulich Leader Scholar pursuing a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University. She has worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
+        "Josephina is a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University as well as a Schulich Leader Scholar. She has worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
