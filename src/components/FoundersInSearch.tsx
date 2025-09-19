@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Experience across public and private markets. Worked on the Macro Trading Desk at University Pension Plan Ontario covering foreign exchange, equity total return swaps, and repurchase agreements within a multi‑billion dollar portfolio. Previously a quantitative analyst within Equity Markets at TMX Group focused on trading infrastructure and market operations. Also worked in venture capital at HCS Capital on financial technology and insurance technology investments. Leads strategy, macro overlay, and limited partner relationships.",
+        "Founded BAI Funds after experience across public and private markets. Worked on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a ~$13B AUM portfolio. Previously in Equity Markets at TMX Group as an Automations Engineer (Quant Developer) within the Market Operations team, focused on trading infrastructure, technology, and equities product support. Also worked in Venture Capital at HCS Capital, focusing on fintech and insurtech co-investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -21,7 +21,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       description:
-        "Founding machine learning engineer at Boardy AI, building production systems for large‑scale artificial intelligence applications. Developed machine learning pipelines at UTEX Scientific Instruments. Contributed to perception and path‑planning systems with WATonomous and the MIT‑PITT‑RW autonomous racing program. Leads real‑time modeling, data pipelines, and execution reliability for the platform.",
+        "Brings deep technical expertise in machine learning and scalable systems. Founding Machine Learning Engineer at Boardy AI, a Toronto startup backed by $11M in funding, where he built pipelines for digital human interaction and large-scale AI deployment. Previously developed ML systems at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous. At BAI Funds, leads the design of the data and model infrastructure to support continuous research and trading automation.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "Quantitative analyst in Electronic Trading for cash equities at BMO Capital Markets. Previously a venture capital analyst at Render Capital evaluating early‑stage technology investments. Combines market microstructure research with thematic industry analysis to inform signal design and portfolio construction.",
+        "Combines front-office trading and venture capital experience. Worked as a Quantitative Analyst in Electronic Cash Equities at BMO Capital Markets, developing models for electronic trading. Also spent time in Venture Capital at Render Capital, evaluating early-stage technology investments. With dual CS/BBA training at Waterloo and Laurier as a Schulich Leader Scholar, bridges rigorous technical analysis with thematic industry insights, shaping BAI's sector and industry research agenda.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -37,7 +37,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       description:
-        "Quantitative analyst within Equity Markets at TMX Group with focus on Canadian market structure and product initiatives. Leads limited partner relationships, strategic partnerships, and capital formation to scale systematic strategies.",
+        "Worked in Equity Markets at TMX Group as part of the Equity Product Design team, conducting market structure research as a Quant Analyst. Focused on product innovation, trading rules, and structural impacts on Canadian equities. At Western University, also helped lead communications and partnerships for student investment organizations. At BAI Funds, manages capital formation, investor partnerships, and external relationships, pairing market structure expertise with a growing institutional network.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
