@@ -11,15 +11,31 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   const teamMembers = [
     {
       name: "Peter Bai",
-      role: "CIO / LP Relations",
-      description: "Macro overlay and institutional structuring. Expertise in portfolio construction and institutional capital management.",
-      image: "/lovable-uploads/BAI Emblem.png"
+      role: "Founder & Managing Partner",
+      description: "Leads firm strategy, capital formation, and portfolio oversight. Experience across macro trading at a Canadian pension plan, equity markets at a national exchange, venture co-investments, and private buyout search—bringing institutional structuring and behavioral market insights to BAI Awan Investments.",
+      image: "/lovable-uploads/BAI Emblem.png",
+      linkedinUrl: "https://www.linkedin.com/in/peter-bai/"
     },
     {
       name: "Muhammad Awan", 
-      role: "Head of Research / CTO",
-      description: "ML, AI, and signal generation. Leading systematic strategy development and technology infrastructure.",
-      image: "/lovable-uploads/BAI Emblem.png"
+      role: "Head of Systems Engineering",
+      description: "Architects the research and execution stack. Background includes founding ML engineering at a venture-backed AI startup, industrial ML systems for nondestructive testing, and autonomous systems research—building scalable, low-latency infrastructure for signal generation and execution.",
+      image: "/lovable-uploads/BAI Emblem.png",
+      linkedinUrl: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca"
+    },
+    {
+      name: "Josephina Kim",
+      role: "Head of Industry Research",
+      description: "Drives sector research and microstructure insights. Experience across electronic trading (cash equities) and early-stage technology investing—translating domain context into systematic hypotheses, factor design, and risk-aware signal validation.",
+      image: "/lovable-uploads/BAI Emblem.png",
+      linkedinUrl: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca"
+    },
+    {
+      name: "Frank Zou",
+      role: "Head of Capital & Partnerships",
+      description: "Builds LP relationships and strategic partnerships. Background in equity markets and communications leadership—focused on transparent reporting, ecosystem partnerships, and long-horizon alignment with capital providers.",
+      image: "/lovable-uploads/BAI Emblem.png",
+      linkedinUrl: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca"
     }
   ];
 
@@ -38,11 +54,11 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100}>
               <Card className="border border-border h-full bg-background">
-                                 <CardContent className="p-8 text-center">
+                <CardContent className="p-8 text-center">
                    <div className="w-32 h-32 mx-auto mb-6 bg-muted rounded-full flex items-center justify-center">
                      <img 
                        src={member.image} 
@@ -51,8 +67,20 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                      />
                    </div>
                    <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
-                                     <p className="text-muted-foreground font-medium mb-4">{member.role}</p>
+                  <p className="text-muted-foreground font-medium mb-4">{member.role}</p>
                   <p className="text-muted-foreground">{member.description}</p>
+                  {"linkedinUrl" in member && (
+                    <div className="mt-6">
+                      <a
+                        href={(member as any).linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-muted-foreground underline hover:text-foreground"
+                      >
+                        View LinkedIn
+                      </a>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </FadeIn>
