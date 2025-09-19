@@ -18,9 +18,7 @@ const Community: React.FC<CommunityProps> = ({ className }) => {
           
           <FadeIn delay={100}>
             <div className="text-center">
-              <p className="text-xl text-muted-foreground">
-                team@baifunds.com for inquiries
-              </p>
+              <p className="text-xl text-muted-foreground">team@baifunds.com for inquiries</p>
             </div>
           </FadeIn>
         </div>
