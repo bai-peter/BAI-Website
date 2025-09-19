@@ -14,7 +14,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
         <div className="max-w-4xl mx-auto">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center">
-              Systematic Alpha Through Behavioral Infrastructure
+              Systematic Alpha Through Multi-Agent AI Research
             </h2>
           </FadeIn>
           
@@ -29,16 +29,16 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
               <div className="p-6 border border-border">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Funds (Bai Awan Investments)</h3>
                 <p className="text-muted-foreground">
-                  The hedge fund entity that deploys capital and generates returns through systematic behavioral insights.
+                  The hedge fund entity that deploys capital and generates returns through systematic multi-agent AI research.
                 </p>
               </div>
             </FadeIn>
             
             <FadeIn delay={200}>
               <div className="p-6 border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Tech (Behavioral Alpha Infrastructure)</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Tech (Multi-Agent AI Platform)</h3>
                 <p className="text-muted-foreground">
-                  The proprietary AI-driven technology platform that powers investment decisions and systematic execution.
+                  The proprietary multi-agent AI research system that powers investment decisions through specialized artificial intelligence agents.
                 </p>
               </div>
             </FadeIn>
@@ -48,19 +48,19 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
             <div className="grid md:grid-cols-4 gap-6 text-center">
               <div>
                 <h4 className="text-lg font-semibold mb-2">Systematic</h4>
-                <p className="text-sm text-muted-foreground">Data-driven approach</p>
+                <p className="text-sm text-muted-foreground">Multi-agent AI approach</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-2">Behavioral</h4>
-                <p className="text-sm text-muted-foreground">Cognitive bias insights</p>
+                <h4 className="text-lg font-semibold mb-2">Specialized</h4>
+                <p className="text-sm text-muted-foreground">Domain-focused agents</p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold mb-2">Institutional</h4>
                 <p className="text-sm text-muted-foreground">Risk management</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-2">Scalable</h4>
-                <p className="text-sm text-muted-foreground">Technology-driven</p>
+                <h4 className="text-lg font-semibold mb-2">Adaptive</h4>
+                <p className="text-sm text-muted-foreground">Continuous learning</p>
               </div>
             </div>
           </FadeIn>

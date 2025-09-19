@@ -21,24 +21,24 @@ const About: React.FC<AboutProps> = ({ className }) => {
               <div className="space-y-6">
                 <div>
                   <span className="text-sm font-medium text-muted-foreground mb-2 inline-block">Our Mission</span>
-                  <h3 className="text-2xl font-semibold mb-4">We generate alpha using behavioral insights in our investment process</h3>
+                  <h3 className="text-2xl font-semibold mb-4">We generate alpha using multi-agent AI research systems</h3>
                 </div>
                 
                 <p className="text-lg text-muted-foreground">
-                  BAI Funds combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
+                  BAI Funds employs specialized AI agents that work in coordinated teams to systematically analyze global markets, from macro economic conditions down to individual stock selection.
                 </p>
                 
                 <p className="text-lg text-muted-foreground">
-                  We model cognitive biases, emotional reactions, and sentiment shifts in real time—then execute fully automated strategies to capture excess returns.
+                  Our multi-agent system eliminates human bias and cognitive limitations while providing institutional-quality research capabilities with the agility of a focused team.
                 </p>
                 
                 <div className="pt-4">
                   <h4 className="text-lg font-semibold mb-3">Our Philosophy</h4>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li>• Research-first approach to investment strategy</li>
-                    <li>• Systematic methodology over discretionary decisions</li>
+                    <li>• Multi-agent AI research methodology</li>
+                    <li>• Systematic analysis from macro to stock level</li>
                     <li>• Technology-driven execution and risk management</li>
-                    <li>• Continuous innovation in behavioral modeling</li>
+                    <li>• Continuous learning and adaptation</li>
                   </ul>
                 </div>
               </div>
@@ -57,12 +57,12 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 
                 <div className="space-y-4">
                   <div>
-                    <h5 className="font-medium text-foreground">Research Excellence</h5>
-                    <p className="text-sm text-muted-foreground">Rigorous scientific approach to market analysis</p>
+                    <h5 className="font-medium text-foreground">AI Agent Specialization</h5>
+                    <p className="text-sm text-muted-foreground">Each agent focuses on specific analysis domains</p>
                   </div>
                   <div>
-                    <h5 className="font-medium text-foreground">Systematic Innovation</h5>
-                    <p className="text-sm text-muted-foreground">Continuous advancement in behavioral modeling</p>
+                    <h5 className="font-medium text-foreground">Systematic Research</h5>
+                    <p className="text-sm text-muted-foreground">Multi-layer analysis from global macro to stock selection</p>
                   </div>
                   <div>
                     <h5 className="font-medium text-foreground">Institutional Quality</h5>

@@ -10,43 +10,43 @@ interface TechnologyPlatformProps {
 const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) => {
   const capabilities = [
     {
-      title: "Real-time Behavioral Modeling",
-      description: "Advanced AI algorithms that detect cognitive biases and emotional reactions in market movements",
-      icon: "🧠"
+      title: "Multi-Agent AI Research System",
+      description: "Specialized AI agents working in coordinated teams, each focused on specific analysis domains from macro to stock selection",
+      icon: "🤖"
     },
     {
-      title: "Cognitive Bias Detection",
-      description: "Systematic identification of anchoring, confirmation bias, and herding behaviors across market participants",
-      icon: "🎯"
+      title: "Systematic Research Funnel",
+      description: "Multi-layer analysis filtering opportunities from global macro regimes down to individual stock selection",
+      icon: "🔍"
     },
     {
-      title: "Sentiment Analysis & Prediction",
-      description: "Natural language processing of news, social media, and earnings calls to predict sentiment shifts",
+      title: "Multi-Lens Signal Integration",
+      description: "Combines fundamental, technical, sentiment, and behavioral signals for comprehensive stock analysis",
       icon: "📊"
     },
     {
-      title: "Automated Signal Generation",
-      description: "Machine learning pipelines that convert behavioral insights into actionable trading signals",
+      title: "Continuous Learning & Adaptation",
+      description: "AI agents that continuously learn from market feedback and adapt to changing market conditions",
       icon: "⚡"
     }
   ];
 
   const infrastructure = [
     {
-      title: "GPU-powered Backtesting",
-      description: "High-performance computing infrastructure for rapid strategy validation and optimization"
+      title: "Cloud-Native Architecture",
+      description: "Modern React/TypeScript frontend with Node.js/TypeScript backend for scalability and reliability"
     },
     {
-      title: "Containerized ML Pipelines",
-      description: "Scalable, modular architecture for deploying and managing machine learning models"
+      title: "Real-Time Data Integration",
+      description: "Market data APIs with intelligent caching and real-time price updates for US and Canadian equities"
     },
     {
-      title: "Colocated Execution Systems", 
-      description: "Ultra-low latency order routing and execution infrastructure"
+      title: "Scalable Database Design", 
+      description: "PostgreSQL with extensible schema designed for multiple asset classes and systematic data management"
     },
     {
-      title: "Low-latency Signal Ingestion",
-      description: "Real-time data processing from multiple sources including market data, news, and alternative datasets"
+      title: "Containerized Deployment",
+      description: "Docker-based infrastructure ensuring consistent deployment and easy scaling across environments"
     }
   ];
 
@@ -62,7 +62,7 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
           
           <FadeIn delay={100}>
             <p className="text-xl text-center text-muted-foreground mb-12">
-              Proprietary technology infrastructure that powers our systematic investment strategies
+              Multi-agent AI research system that systematically analyzes global markets through specialized artificial intelligence agents
             </p>
           </FadeIn>
         </div>
@@ -87,11 +87,11 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
 
         <FadeIn delay={300}>
           <div className="bg-card border border-border p-8">
-            <h3 className="text-2xl font-semibold mb-8 text-center">Infrastructure Details</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center">Technical Infrastructure</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {infrastructure.map((item, index) => (
                 <div key={index} className="p-4 border border-border/50">
-                                     <h4 className="text-lg font-medium mb-2 text-foreground">{item.title}</h4>
+                  <h4 className="text-lg font-medium mb-2 text-foreground">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
               ))}
