@@ -58,7 +58,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto items-stretch">
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100}>
               <Card className="border border-border h-full bg-background">
