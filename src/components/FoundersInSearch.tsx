@@ -16,7 +16,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       fullDescription:
-        "Peter is an Ivey HBA student at Western University. He previously worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario (FX, Equity TRS, Repo) and as an Equity Markets quant at TMX Group. He also worked in venture capital at HCS Capital focusing on insurtech and fintech co-investments. At BAI Funds, Peter leads strategy, macro overlay, and LP relationships.",
+        "Peter is an Ivey HBA student at Western University. He has worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a ~$13B AUM portfolio. Previously, he was an Equity Markets quant at TMX Group, focused on trading infrastructure and technology. He also worked in venture capital at HCS Capital, focusing on fintech and insurtech co-investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -24,7 +24,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       fullDescription:
-        "Muhammad studies Computer Science at the University of Waterloo. He is a Founding Machine Learning Engineer at Boardy AI, building production ML systems; previously he built ML pipelines at UTEX Scientific Instruments and contributed to perception and path-planning with WATonomous and MIT-PITT-RW. At BAI Funds, Muhammad leads real-time modeling, data pipelines, and execution reliability across the platform.",
+        "Muhammad is a Computer Science student at the University of Waterloo. He is a Founding Machine Learning Engineer at Boardy AI, where he builds production ML systems for digital human interaction. He has previously built ML pipelines at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous and path planning at MIT-PITT-RW.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -32,7 +32,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       fullDescription:
-        "Josephina is a Schulich Leader Scholar pursuing a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University. She worked as a quantitative analyst on BMO Capital Markets’ Electronic Cash Equities desk and as a venture capital analyst at Render Capital. At BAI Funds, Josephina drives industry research, combining microstructure insight with thematic analysis to inform signal design.",
+        "Josephina is a Schulich Leader Scholar pursuing a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University. She has worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -40,7 +40,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       fullDescription:
-        "Frank studies Business at Huron University (Western) with Ivey AEO status and is a varsity rower. He worked in Equity Markets at TMX Group as a quantitative analyst focused on product and market-structure research. At BAI Funds, Frank leads LP relationships, strategic partnerships, and capital formation to scale systematic strategies.",
+        "Frank is a Business student at Huron University (Western) with Ivey AEO status and is a varsity rower. He has worked in Equity Markets at TMX Group as a quantitative analyst, conducting market structure research and focusing on product innovation and trading rules. He also helped lead communications and partnerships for student investment organizations at Western University.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
