@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Macro desk quant dev at UPP (FX, Equity TRS, Repo); ex-TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
+        "Experience across public and private markets. Worked on the Macro Trading Desk at University Pension Plan Ontario covering foreign exchange, equity total return swaps, and repurchase agreements within a multi‑billion dollar portfolio. Previously a quantitative analyst within Equity Markets at TMX Group focused on trading infrastructure and market operations. Also worked in venture capital at HCS Capital on financial technology and insurance technology investments. Leads strategy, macro overlay, and limited partner relationships.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -21,7 +21,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       description:
-        "Founding ML Engineer at Boardy AI; built ML pipelines at UTEX; contributed to WATonomous perception and MIT-PITT-RW path planning. Leads real-time modeling, data pipelines, and execution reliability.",
+        "Founding machine learning engineer at Boardy AI, building production systems for large‑scale artificial intelligence applications. Developed machine learning pipelines at UTEX Scientific Instruments. Contributed to perception and path‑planning systems with WATonomous and the MIT‑PITT‑RW autonomous racing program. Leads real‑time modeling, data pipelines, and execution reliability for the platform.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
+        "Quantitative analyst in Electronic Trading for cash equities at BMO Capital Markets. Previously a venture capital analyst at Render Capital evaluating early‑stage technology investments. Combines market microstructure research with thematic industry analysis to inform signal design and portfolio construction.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -37,7 +37,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       description:
-        "TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation to scale strategies.",
+        "Quantitative analyst within Equity Markets at TMX Group with focus on Canadian market structure and product initiatives. Leads limited partner relationships, strategic partnerships, and capital formation to scale systematic strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
