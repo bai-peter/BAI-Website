@@ -32,7 +32,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       fullDescription:
-        "Josephina is a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University as well as a Schulich Leader Scholar. She has worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
+        "Josephina is pursuing a dual CS/BBA program at the University of Waterloo and Wilfrid Laurier University and is a Schulich Leader Scholar. She has worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -40,7 +40,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       fullDescription:
-        "Frank is a Business student at Huron University (Western) with Ivey AEO status and is a varsity rower. He has worked in Equity Markets at TMX Group as a quantitative analyst, conducting market structure research and focusing on product innovation and trading rules. He also helped lead communications and partnerships for student investment organizations at Western University.",
+        "Frank is a Business student at Huron University (Western) with Ivey AEO status and a varsity rower. He has worked in Equity Markets at TMX Group as a quantitative analyst, conducting market structure research and focusing on product innovation and trading rules. He also helped lead communications and partnerships for student investment organizations at Western University.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
