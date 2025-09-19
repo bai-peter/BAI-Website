@@ -15,7 +15,6 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
-      shortDescription: "Macro trading & VC experience",
       fullDescription:
         "Macro desk quant dev at UPP (FX, Equity TRS, Repo); ex-TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
       image: "/lovable-uploads/BAI Emblem.png",
@@ -24,7 +23,6 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
-      shortDescription: "ML & systems engineering",
       fullDescription:
         "Founding ML Engineer at Boardy AI; built ML pipelines at UTEX; contributed to WATonomous perception and MIT-PITT-RW path planning. Leads real-time modeling, data pipelines, and execution reliability.",
       image: "/lovable-uploads/BAI Emblem.png",
@@ -33,7 +31,6 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Josephina Kim",
       role: "Head of Industry Research",
-      shortDescription: "Trading & VC research",
       fullDescription:
         "BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
       image: "/lovable-uploads/BAI Emblem.png",
@@ -42,7 +39,6 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
-      shortDescription: "Capital formation & partnerships",
       fullDescription:
         "TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation to scale strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
@@ -88,8 +84,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                     />
                   </div>
                   <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-muted-foreground font-medium mb-2 text-sm">{member.role}</p>
-                  <p className="text-muted-foreground text-sm mb-3">{member.shortDescription}</p>
+                  <p className="text-muted-foreground font-medium mb-4 text-sm">{member.role}</p>
                   
                   <div className="flex items-center justify-center gap-2">
                     <a
@@ -103,7 +98,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                     </a>
                     <span className="text-muted-foreground">•</span>
                     <span className="text-xs text-muted-foreground">
-                      {expandedCard === index ? "Click to close" : "Click for details"}
+                      {expandedCard === index ? "Click to close" : "Learn More"}
                     </span>
                   </div>
 
