@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Former Macro desk quant dev at UPP (FX, Equity TRS, Repo) and TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
+        "Macro desk quant dev at UPP (FX, Equity TRS, Repo); ex-TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "Former BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
+        "BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -37,7 +37,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       description:
-        "Former TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation for scaling strategies.",
+        "TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation to scale strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
