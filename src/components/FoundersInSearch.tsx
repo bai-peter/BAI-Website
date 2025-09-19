@@ -16,7 +16,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       fullDescription:
-        "Peter is an Ivey HBA student at Western University. He has worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a approximately $13 billion AUM portfolio. Previously, he was an Equity Markets quant at TMX Group, focused on trading infrastructure and technology. He also worked in venture capital at HCS Capital, focusing on fintech and insurtech co-investments.",
+        "Peter is an Ivey HBA student at Western University. He has worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a $13 billion AUM portfolio. Previously, he was an Equity Markets quant at TMX Group, focused on trading infrastructure and technology. He also worked in venture capital at HCS Capital, focusing on fintech and insurtech co-investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
