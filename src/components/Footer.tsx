@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
             <img 
-              src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+              src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
               alt="BAI" 
               className="w-32 h-auto object-contain"
             />

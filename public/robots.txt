@@ -9,7 +9,6 @@ Crawl-delay: 1
 
 # Allow all important directories
 Allow: /assets/
-Allow: /lovable-uploads/
 Allow: /public/
 
 # Disallow admin or private areas (if any exist)

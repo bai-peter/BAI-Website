@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           className="flex items-center transition-opacity hover:opacity-80 h-full"
         >
           <img 
-            src="/lovable-uploads/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+            src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
             alt="BAI" 
             className="h-12 w-auto object-contain px-2"
             style={{ maxWidth: 'none' }}
