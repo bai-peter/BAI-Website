@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Founded BAI Funds after experience across public and private markets. Worked on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a ~$13B AUM portfolio. Previously in Equity Markets at TMX Group as an Automations Engineer (Quant Developer) within the Market Operations team, focused on trading infrastructure, technology, and equities product support. Also worked in Venture Capital at HCS Capital, focusing on fintech and insurtech co-investments.",
+        "Worked on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a ~$13B AUM portfolio. Previously in Equity Markets at TMX Group as an Automations Engineer (Quant Developer) within the Market Operations team, focused on trading infrastructure, technology, and equities product support. Also worked in Venture Capital at HCS Capital, focusing on fintech and insurtech co-investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -21,7 +21,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       description:
-        "Brings deep technical expertise in machine learning and scalable systems. Founding Machine Learning Engineer at Boardy AI, a Toronto startup backed by $11M in funding, where he built pipelines for digital human interaction and large-scale AI deployment. Previously developed ML systems at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous. At BAI Funds, leads the design of the data and model infrastructure to support continuous research and trading automation.",
+        "Founding Machine Learning Engineer at Boardy AI, a Toronto startup backed by $11M in funding, where he built pipelines for digital human interaction and large-scale AI deployment. Previously developed ML systems at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous. At BAI Funds, leads the design of the data and model infrastructure to support continuous research and trading automation.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "Combines front-office trading and venture capital experience. Worked as a Quantitative Analyst in Electronic Cash Equities at BMO Capital Markets, developing models for electronic trading. Also spent time in Venture Capital at Render Capital, evaluating early-stage technology investments. With dual CS/BBA training at Waterloo and Laurier as a Schulich Leader Scholar, bridges rigorous technical analysis with thematic industry insights, shaping BAI's sector and industry research agenda.",
+        "Worked as a Quantitative Analyst in Electronic Cash Equities at BMO Capital Markets, developing models for electronic trading. Also spent time in Venture Capital at Render Capital, evaluating early-stage technology investments. With dual CS/BBA training at Waterloo and Laurier as a Schulich Leader Scholar, bridges rigorous technical analysis with thematic industry insights, shaping BAI's sector and industry research agenda.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
