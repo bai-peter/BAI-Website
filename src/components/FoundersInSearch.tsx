@@ -12,31 +12,35 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
-      description: "Leads firm strategy, capital formation, and portfolio oversight. Experience across macro trading at a Canadian pension plan, equity markets at a national exchange, venture co-investments, and private buyout search—bringing institutional structuring and behavioral market insights to BAI Awan Investments.",
+      description:
+        "Former quant developer on the Macro desk at University Pension Plan (FX, Equity TRS, Repo), ex-Equity Markets quant at TMX Group, and prior venture investor at HCS Capital focusing on insurtech and fintech. Leads strategy, macro overlay, and institutional partnerships.",
       image: "/lovable-uploads/BAI Emblem.png",
-      linkedinUrl: "https://www.linkedin.com/in/peter-bai/"
+      linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
     {
-      name: "Muhammad Awan", 
+      name: "Muhammad Awan",
       role: "Head of Systems Engineering",
-      description: "Architects the research and execution stack. Background includes founding ML engineering at a venture-backed AI startup, industrial ML systems for nondestructive testing, and autonomous systems research—building scalable, low-latency infrastructure for signal generation and execution.",
+      description:
+        "Systems, ML/AI, and signal engineering. Leads the design and reliability of our real-time modeling, data pipelines, and execution systems; background across applied ML, perception, and production-grade infrastructure.",
       image: "/lovable-uploads/BAI Emblem.png",
-      linkedinUrl: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca"
+      linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
     {
       name: "Josephina Kim",
       role: "Head of Industry Research",
-      description: "Drives sector research and microstructure insights. Experience across electronic trading (cash equities) and early-stage technology investing—translating domain context into systematic hypotheses, factor design, and risk-aware signal validation.",
+      description:
+        "Former quantitative analyst in Electronic Trading (Cash Equities) at BMO Capital Markets and prior venture investor at Render Capital. Brings industry microstructure insight and thematic research to inform signal development.",
       image: "/lovable-uploads/BAI Emblem.png",
-      linkedinUrl: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca"
+      linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
     {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
-      description: "Builds LP relationships and strategic partnerships. Background in equity markets and communications leadership—focused on transparent reporting, ecosystem partnerships, and long-horizon alignment with capital providers.",
+      description:
+        "Former Equity Markets quant at TMX Group. Focused on limited partner relationships, strategic partnerships, and capital formation to scale systematic strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
-      linkedinUrl: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca"
-    }
+      linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
+    },
   ];
 
   return (
@@ -69,15 +73,15 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                    <h3 className="text-2xl font-semibold mb-2">{member.name}</h3>
                   <p className="text-muted-foreground font-medium mb-4">{member.role}</p>
                   <p className="text-muted-foreground">{member.description}</p>
-                  {"linkedinUrl" in member && (
-                    <div className="mt-6">
+                  {"linkedin" in member && (
+                    <div className="mt-5">
                       <a
-                        href={(member as any).linkedinUrl}
+                        href={(member as any).linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-muted-foreground underline hover:text-foreground"
+                        className="inline-block text-sm text-foreground/80 hover:text-foreground underline"
                       >
-                        View LinkedIn
+                        LinkedIn
                       </a>
                     </div>
                   )}
