@@ -33,29 +33,31 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             
             <FadeIn delay={200}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-foreground leading-tight mb-8 text-balance">
-                Multi-Agent AI Research
+                Together, We<br />
+                Turn Ambition<br />
+                Into Alpha
               </h1>
             </FadeIn>
             
             <FadeIn delay={300}>
               <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-12 max-w-3xl mx-auto text-balance font-medium">
-                Specialized AI agents working in coordinated teams to systematically analyze global markets from macro conditions to individual stock selection
+                For the next generation of quantitative investing, we've built the world's first fully automated hedge fund powered by specialized AI agents that never sleep, never get tired, and continuously learn.
               </p>
             </FadeIn>
             
             <FadeIn delay={400}>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a 
-                  href="#thesis"
+                  href="#what-we-do"
                   className="btn-primary text-lg px-8 py-4 focus-visible"
                 >
-                  Learn More
+                  Explore What We Do
                 </a>
                 <a 
-                  href="#contact"
+                  href="#careers"
                   className="btn-secondary text-lg px-8 py-4 focus-visible"
                 >
-                  Get In Touch
+                  Join Our Team
                 </a>
               </div>
             </FadeIn>

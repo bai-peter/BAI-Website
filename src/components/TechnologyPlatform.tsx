@@ -10,43 +10,43 @@ interface TechnologyPlatformProps {
 const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) => {
   const capabilities = [
     {
-      title: "Multi-Agent AI Research System",
-      description: "Specialized AI agents working in coordinated teams, each focused on specific analysis domains from macro to stock selection",
+      title: "The Multi-Agent AI System",
+      description: "Specialized AI agents working in coordinated teams, each becoming an expert in their domain while collaborating to provide complete market analysis from global macro regimes down to individual stock selection",
       icon: "🤖"
     },
     {
-      title: "Systematic Research Funnel",
-      description: "Multi-layer analysis filtering opportunities from global macro regimes down to individual stock selection",
+      title: "The Research Funnel",
+      description: "Systematic multi-layer analysis that filters opportunities from global macro regimes through sector rotation, industry focus, and individual stock selection with zero human bias",
       icon: "🔍"
     },
     {
-      title: "Multi-Lens Signal Integration",
-      description: "Combines fundamental, technical, sentiment, and behavioral signals for comprehensive stock analysis",
+      title: "The Signal Engine",
+      description: "Multi-lens analysis combining fundamental, technical, sentiment, behavioral, and structural signals for comprehensive stock evaluation and ranking",
       icon: "📊"
     },
     {
-      title: "Continuous Learning & Adaptation",
-      description: "AI agents that continuously learn from market feedback and adapt to changing market conditions",
+      title: "The Learning Machine",
+      description: "AI agents that continuously learn from market feedback, adapt to changing regimes, and evolve their strategies to maintain competitive advantage",
       icon: "⚡"
     }
   ];
 
   const infrastructure = [
     {
-      title: "Cloud-Native Architecture",
-      description: "Modern React/TypeScript frontend with Node.js/TypeScript backend for scalability and reliability"
+      title: "BAI Data Lake",
+      description: "Centralized data storage and processing infrastructure that ingests real-time market data, fundamentals, news, and alternative data sources"
     },
     {
-      title: "Real-Time Data Integration",
-      description: "Market data APIs with intelligent caching and real-time price updates for US and Canadian equities"
+      title: "BAI Alpha Engine",
+      description: "Proprietary signal generation system that processes multi-lens analysis and produces actionable investment signals with institutional-quality risk management"
     },
     {
-      title: "Scalable Database Design", 
-      description: "PostgreSQL with extensible schema designed for multiple asset classes and systematic data management"
+      title: "BAI Portfolio Optimizer", 
+      description: "Dynamic portfolio allocation system that balances expected return, risk, transaction costs, and diversification requirements using advanced optimization techniques"
     },
     {
-      title: "Containerized Deployment",
-      description: "Docker-based infrastructure ensuring consistent deployment and easy scaling across environments"
+      title: "BAI Risk Manager",
+      description: "Real-time risk monitoring and management system that ensures compliance with position limits, regulatory requirements, and investment mandates"
     }
   ];
 
@@ -56,13 +56,13 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
         <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground text-balance">
-              BAI Tech Platform
+              Innovation at the Forefront of Finance
             </h2>
           </FadeIn>
           
           <FadeIn delay={100}>
             <p className="text-large text-center text-foreground/90 mb-12 text-balance font-medium">
-              Multi-agent AI research system that systematically analyzes global markets through specialized artificial intelligence agents
+              Our people are relentless in seeking a better way. Each day, we reimagine and refine our strategies, models and technology in pursuit of superior results and long-term performance.
             </p>
           </FadeIn>
         </div>
@@ -89,7 +89,7 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
 
         <FadeIn delay={300}>
           <div className="bg-card border border-border p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Technical Infrastructure</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Core Systems</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {infrastructure.map((item, index) => (
                 <div key={index} className="group p-6 border border-border/50 hover:bg-muted/20 rounded-lg transition-colors duration-300">

@@ -107,20 +107,20 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           <button 
             className="text-left hover:text-foreground transition-colors"
             onClick={() => {
-              scrollToSection('thesis');
+              scrollToSection('about');
               setIsMobileMenuOpen(false);
             }}
           >
-            Investment Thesis
+            Who We Are
           </button>
           <button 
             className="text-left hover:text-foreground transition-colors"
             onClick={() => {
-              scrollToSection('strategy');
+              scrollToSection('what-we-do');
               setIsMobileMenuOpen(false);
             }}
           >
-            Strategy
+            What We Do
           </button>
           <button 
             className="text-left hover:text-foreground transition-colors"
@@ -138,25 +138,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
               setIsMobileMenuOpen(false);
             }}
           >
-            Team
-          </button>
-          <button 
-            className="text-left hover:text-foreground transition-colors"
-            onClick={() => {
-              scrollToSection('about');
-              setIsMobileMenuOpen(false);
-            }}
-          >
-            About
-          </button>
-          <button 
-            className="text-left hover:text-foreground transition-colors"
-            onClick={() => {
-              scrollToSection('contact');
-              setIsMobileMenuOpen(false);
-            }}
-          >
-            Contact
+            Careers
           </button>
         </nav>
       </div>
@@ -170,12 +152,10 @@ interface NavLinksProps {
 
 const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => {
   const navItems = [
-    { id: 'thesis', label: 'Investment Thesis' },
-    { id: 'strategy', label: 'Strategy' },
+    { id: 'about', label: 'Who We Are' },
+    { id: 'what-we-do', label: 'What We Do' },
     { id: 'technology', label: 'Technology' },
-    { id: 'team', label: 'Team' },
-    { id: 'about', label: 'About' },
-    { id: 'contact', label: 'Contact' },
+    { id: 'team', label: 'Careers' },
   ];
 
   return (

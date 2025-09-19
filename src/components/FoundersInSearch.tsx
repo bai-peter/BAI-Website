@@ -55,13 +55,34 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground">Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground">A Team Where Every Mind Counts</h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-xl text-center text-foreground/90 font-medium">
-              Multi-agent AI research team combining quantitative finance expertise with advanced machine learning systems
+            <p className="text-xl text-center text-foreground/90 font-medium mb-12">
+              From seasoned leaders to new recruits, every member of our team helps develop and execute on powerful insights. We bring together brilliant minds to do what others consider impossible.
             </p>
+          </FadeIn>
+          
+          <FadeIn delay={200}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold text-bai-primary mb-1">4</div>
+                <div className="text-sm text-muted-foreground">Founding Team</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-bai-primary mb-1">100%</div>
+                <div className="text-sm text-muted-foreground">Advanced Degrees</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-bai-primary mb-1">3</div>
+                <div className="text-sm text-muted-foreground">Top Universities</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-bai-primary mb-1">$13B+</div>
+                <div className="text-sm text-muted-foreground">Combined AUM Experience</div>
+              </div>
+            </div>
           </FadeIn>
         </div>
         

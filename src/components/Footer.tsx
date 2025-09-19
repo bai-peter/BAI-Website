@@ -40,16 +40,16 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           
           <div className="flex space-x-6 mb-4 md:mb-0">
             <button
-              onClick={() => scrollToSection('thesis')} 
+              onClick={() => scrollToSection('about')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              Investment Thesis
+              Who We Are
             </button>
             <button
-              onClick={() => scrollToSection('strategy')} 
+              onClick={() => scrollToSection('what-we-do')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              Strategy
+              What We Do
             </button>
             <button
               onClick={() => scrollToSection('technology')} 
@@ -58,16 +58,17 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               Technology
             </button>
             <button
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => scrollToSection('team')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              Contact
+              Careers
             </button>
           </div>
           
           <div className="text-sm text-muted-foreground text-center md:text-right">
-            <div>&copy; {new Date().getFullYear()} BAI. All rights reserved.</div>
+            <div>&copy; {new Date().getFullYear()} BAI Funds. All rights reserved.</div>
             <div className="text-xs mt-1">Private investment fund. Qualified investors only.</div>
+            <div className="text-xs mt-1">Contact: info@baifunds.com</div>
           </div>
         </div>
       </div>
