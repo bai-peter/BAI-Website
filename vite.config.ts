@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
     },
     manifest: true,
     sourcemap: false,
-    target: 'es2015'
+    target: 'es2020'
   },
   plugins: [
     react(),
