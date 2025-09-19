@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Worked on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a ~$13B AUM portfolio. Previously in Equity Markets at TMX Group as an Automations Engineer (Quant Developer) within the Market Operations team, focused on trading infrastructure, technology, and equities product support. Also worked in Venture Capital at HCS Capital, focusing on fintech and insurtech co-investments.",
+        "Worked on the Trading, Liquidity and Exposure Management Team at University Pension Plan Ontario, covering FX, equity TRS, futures and repo trading within a ~$13B AUM portfolio. Previously in Equity Markets at TMX Group as a Quant Developer within the Equity Markets team, focused on trading infrastructure, technology, and equities trading operations. Also worked in Venture Capital at HCS Capital, focusing on fintech and insurtech co-investments.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "Worked as a Quantitative Analyst in Electronic Cash Equities at BMO Capital Markets, developing models for electronic trading. Also spent time in Venture Capital at Render Capital, evaluating early-stage technology investments. With dual CS/BBA training at Waterloo and Laurier as a Schulich Leader Scholar, bridges rigorous technical analysis with thematic industry insights, shaping BAI's sector and industry research agenda.",
+        "Worked as a Quantitative Trading Analyst on the Electronic Cash Equities desk at BMO Capital Markets, developing models for electronic trading. Also spent time in Venture Capital at Render Capital, evaluating early-stage technology investments. With dual CS/BBA training at Waterloo and Laurier as a Schulich Leader Scholar, bridges rigorous technical analysis with thematic industry insights, shaping BAI's sector and industry research agenda.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
