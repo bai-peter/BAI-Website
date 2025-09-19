@@ -4,50 +4,66 @@
 
 @layer base {
   :root {
-    /* Minimal Color Palette - Black, White-Smoke, Battleship Gray */
-    --black: 0 0% 0%;
-    --white-smoke: 0 0% 96%;
-    --battleship-gray: 0 0% 59%;
+    /* Enhanced Grayscale Palette - Optimized for readability */
+    --white: 0 0% 98%;           /* #FAFAFA - Pure white for text */
+    --light-gray: 0 0% 85%;      /* #D9D9D9 - Light gray for secondary text */
+    --medium-gray: 0 0% 70%;     /* #B3B3B3 - Medium gray for muted text */
+    --dark-gray: 0 0% 50%;       /* #808080 - Dark gray for borders */
+    --black: 0 0% 8%;            /* #141414 - Near black for backgrounds */
+    
+    /* BAI Brand Colors - Enhanced for better contrast */
+    --bai-primary: 0 0% 68%;     /* #A7A6A5 - Logo color with better contrast */
+    --bai-primary-light: 0 0% 78%; /* Lighter version for hover states */
+    --bai-primary-dark: 0 0% 58%;  /* Darker version for depth */
+    --bai-accent: 0 0% 45%;      /* Darker accent for secondary elements */
+    --bai-accent-light: 0 0% 60%; /* Lighter accent */
+    --bai-muted: 0 0% 65%;       /* Muted text with better readability */
+    --bai-subtle: 0 0% 12%;      /* Subtle backgrounds */
+    --bai-highlight: 0 0% 20%;   /* Highlight backgrounds */
 
-    /* Core UI Colors */
+    /* Core UI Colors - Enhanced for better readability */
     --background: var(--black);
-    --foreground: var(--white-smoke);
+    --foreground: var(--white);
 
-    --card: 0 0% 2%;
-    --card-foreground: var(--white-smoke);
+    --card: 0 0% 6%;
+    --card-foreground: var(--white);
 
-    --popover: 0 0% 2%;
-    --popover-foreground: var(--white-smoke);
+    --popover: 0 0% 6%;
+    --popover-foreground: var(--white);
 
-    --primary: var(--white-smoke);
+    --primary: var(--bai-primary);
     --primary-foreground: var(--black);
 
-    --secondary: 0 0% 8%;
-    --secondary-foreground: var(--white-smoke);
+    --secondary: 0 0% 12%;
+    --secondary-foreground: var(--white);
 
-    --muted: 0 0% 6%;
-    --muted-foreground: var(--battleship-gray);
+    --muted: 0 0% 8%;
+    --muted-foreground: var(--light-gray);
 
-    --accent: 0 0% 12%;
-    --accent-foreground: var(--white-smoke);
+    --accent: var(--bai-accent);
+    --accent-foreground: var(--white);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: var(--white-smoke);
+    --destructive-foreground: var(--white);
 
-    --border: 0 0% 12%;
-    --input: 0 0% 8%;
-    --ring: 0 0% 12%;
+    --border: 0 0% 18%;
+    --input: 0 0% 10%;
+    --ring: var(--bai-primary);
 
-    --radius: 0.125rem;
+    --radius: 0.5rem;
 
-    /* Typography Hierarchy */
-    --text-primary: var(--white-smoke);
-    --text-secondary: var(--battleship-gray);
-    --text-muted: 0 0% 45%;
+    /* Enhanced Typography Hierarchy - Better contrast ratios */
+    --text-primary: var(--white);
+    --text-secondary: var(--light-gray);
+    --text-muted: var(--medium-gray);
+    --text-accent: var(--bai-primary);
+    --text-subtle: var(--dark-gray);
 
-    /* Subtle Accents */
-    --highlight: 0 0% 15%;
-    --divider: 0 0% 8%;
+    /* Enhanced Accents */
+    --highlight: 0 0% 8%;
+    --divider: 0 0% 12%;
+    --gradient-primary: linear-gradient(135deg, var(--bai-primary) 0%, var(--bai-primary-light) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--bai-accent) 0%, var(--bai-accent-light) 100%);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -101,7 +117,57 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight;
+    @apply font-serif tracking-tight text-foreground font-bold;
+  }
+  
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
+    letter-spacing: -0.015em;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+    letter-spacing: -0.01em;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug tracking-tight;
+  }
+  
+  h5 {
+    @apply text-lg md:text-xl font-semibold leading-snug;
+  }
+  
+  h6 {
+    @apply text-base md:text-lg font-semibold leading-snug;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed text-muted-foreground;
+    line-height: 1.7;
+  }
+  
+  .text-large {
+    @apply text-xl md:text-2xl leading-relaxed text-foreground;
+    line-height: 1.6;
+  }
+  
+  .text-small {
+    @apply text-sm md:text-base leading-relaxed text-muted-foreground;
+    line-height: 1.6;
+  }
+  
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+  
+  .text-subtle {
+    @apply text-text-subtle;
   }
 }
 
@@ -112,6 +178,73 @@
   
   .text-pretty {
     text-wrap: pretty;
+  }
+  
+  /* Enhanced readability utilities */
+  .text-readable {
+    @apply text-foreground/90 leading-relaxed;
+    line-height: 1.7;
+  }
+  
+  .text-emphasis {
+    @apply text-foreground font-semibold;
+  }
+  
+  .text-subtle {
+    @apply text-muted-foreground;
+  }
+  
+  .text-visible {
+    @apply text-foreground/95 font-medium;
+  }
+  
+  .text-accent {
+    @apply text-bai-primary font-medium;
+  }
+  
+  /* Better spacing utilities */
+  .section-spacing {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+  
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+  
+  /* Enhanced card styles */
+  .card-elevated {
+    @apply bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+  }
+  
+  .card-interactive {
+    @apply card-elevated hover:bg-muted/30 cursor-pointer;
+  }
+  
+  /* Equal height utilities */
+  .equal-height {
+    @apply h-full;
+  }
+  
+  .flex-grow {
+    flex-grow: 1;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+  
+  /* Button enhancements */
+  .btn-primary {
+    @apply bg-bai-primary text-black font-semibold px-6 py-3 rounded-lg hover:bg-bai-primary-light transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-bai-primary text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-bai-primary hover:text-black transition-all duration-300;
+  }
+  
+  /* Focus states for accessibility */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-bai-primary focus:ring-offset-2 focus:ring-offset-background;
   }
 }
 

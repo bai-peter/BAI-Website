@@ -50,26 +50,29 @@ const Gap: React.FC<GapProps> = ({ className }) => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground text-balance">
               Our Investment Approach
             </h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-xl text-center text-muted-foreground mb-12">
+            <p className="text-large text-center text-foreground/90 mb-12 text-balance font-medium">
               Multi-agent AI research system with systematic signal integration and adaptive learning capabilities
             </p>
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {strategies.map((strategy, index) => (
             <FadeIn key={index} delay={150 + index * 50}>
-              <Card className="border border-border h-full bg-card">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">{strategy.title}</h3>
-                  <p className="text-muted-foreground mb-4">{strategy.description}</p>
-                  <p className="text-sm text-muted-foreground/80">{strategy.details}</p>
+              <Card className="card-interactive h-full">
+                <CardContent className="p-8 h-full flex flex-col">
+                  <div className="w-12 h-12 bg-bai-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-bai-primary/30 transition-colors duration-300">
+                    <div className="w-6 h-6 bg-bai-primary rounded-full"></div>
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 text-foreground">{strategy.title}</h3>
+                  <p className="text-readable mb-4 flex-grow">{strategy.description}</p>
+                  <p className="text-small text-muted-foreground">{strategy.details}</p>
                 </CardContent>
               </Card>
             </FadeIn>
@@ -77,13 +80,13 @@ const Gap: React.FC<GapProps> = ({ className }) => {
         </div>
 
         <FadeIn delay={300}>
-          <div className="bg-card border border-border p-8">
-            <h3 className="text-2xl font-semibold mb-6 text-center">Technical Infrastructure</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-card border border-border p-8 rounded-lg">
+            <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Technical Infrastructure</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {infrastructure.map((item, index) => (
-                <div key={index} className="text-center p-4">
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <p className="text-sm text-muted-foreground">{item.title}</p>
+                <div key={index} className="group text-center p-6 hover:bg-muted/20 rounded-lg transition-colors duration-300 h-full flex flex-col justify-center">
+                  <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                  <p className="text-sm text-muted-foreground font-medium">{item.title}</p>
                 </div>
               ))}
             </div>

@@ -68,9 +68,18 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				bai: {
-					gold: 'hsl(var(--bai-gold))',
-					navy: 'hsl(var(--bai-navy))',
-					gray: 'hsl(var(--bai-gray))',
+					primary: 'hsl(var(--bai-primary))',
+					'primary-light': 'hsl(var(--bai-primary-light))',
+					'primary-dark': 'hsl(var(--bai-primary-dark))',
+					accent: 'hsl(var(--bai-accent))',
+					'accent-light': 'hsl(var(--bai-accent-light))',
+					muted: 'hsl(var(--bai-muted))',
+					subtle: 'hsl(var(--bai-subtle))',
+					white: 'hsl(var(--white))',
+					'light-gray': 'hsl(var(--light-gray))',
+					'medium-gray': 'hsl(var(--medium-gray))',
+					'dark-gray': 'hsl(var(--dark-gray))',
+					black: 'hsl(var(--black))',
 				}
 			},
 			borderRadius: {

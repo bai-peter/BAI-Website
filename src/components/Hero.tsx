@@ -32,24 +32,32 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             {/* Logo removed from hero section */}
             
             <FadeIn delay={200}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-foreground leading-tight mb-8">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold tracking-tight text-foreground leading-tight mb-8 text-balance">
                 Multi-Agent AI Research
               </h1>
             </FadeIn>
             
             <FadeIn delay={300}>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed mb-12 max-w-3xl mx-auto text-balance font-medium">
                 Specialized AI agents working in coordinated teams to systematically analyze global markets from macro conditions to individual stock selection
               </p>
             </FadeIn>
             
             <FadeIn delay={400}>
-              <a 
-                href="#thesis"
-                className="inline-block bg-accent text-accent-foreground px-8 py-4 text-lg font-medium hover:bg-accent/90 transition-colors"
-              >
-                Learn More
-              </a>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a 
+                  href="#thesis"
+                  className="btn-primary text-lg px-8 py-4 focus-visible"
+                >
+                  Learn More
+                </a>
+                <a 
+                  href="#contact"
+                  className="btn-secondary text-lg px-8 py-4 focus-visible"
+                >
+                  Get In Touch
+                </a>
+              </div>
             </FadeIn>
           </div>
         </div>

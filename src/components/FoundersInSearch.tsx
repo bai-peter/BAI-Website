@@ -53,45 +53,45 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   return (
     <section id="team" className={cn('py-20 md:py-32 bg-card', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-8 text-center">Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground">Our Team</h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-xl text-center text-muted-foreground">
+            <p className="text-xl text-center text-foreground/90 font-medium">
               Multi-agent AI research team combining quantitative finance expertise with advanced machine learning systems
             </p>
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100}>
               <Card 
                 className={cn(
-                  "border border-border bg-background cursor-pointer transition-all duration-300 hover:shadow-lg",
-                  expandedCard === index ? "shadow-xl" : "hover:shadow-md"
+                  "card-interactive h-full",
+                  expandedCard === index ? "shadow-2xl bg-muted/30" : ""
                 )}
                 onClick={() => toggleExpanded(index)}
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 bg-muted rounded-full flex items-center justify-center">
+                <CardContent className="p-8 text-center h-full flex flex-col">
+                  <div className="w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-20 h-20 object-contain opacity-80"
+                      className="w-24 h-24 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-muted-foreground font-medium mb-4 text-sm">{member.role}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">{member.name}</h3>
+                  <p className="text-muted-foreground font-medium mb-6 text-small flex-grow">{member.role}</p>
                   
-                  <div className="flex items-center justify-center gap-2">
+                  <div className="flex items-center justify-center gap-3">
                     <a
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs text-foreground/80 hover:text-foreground underline"
+                      className="text-xs text-bai-primary hover:text-bai-primary-light underline font-medium"
                       onClick={(e) => e.stopPropagation()}
                     >
                       LinkedIn
@@ -103,8 +103,8 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                   </div>
 
                   {expandedCard === index && (
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <p className="text-small text-muted-foreground leading-relaxed">
                         {member.fullDescription}
                       </p>
                     </div>
