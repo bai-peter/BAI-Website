@@ -29,7 +29,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={cn('py-20 md:py-32 bg-card border-t border-border', className)}>
       <div className="container mx-auto px-4 md:px-6">
-        <div className="border-t border-border pt-12 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-12 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-3 mb-4 md:mb-0">
             <img 
               src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
