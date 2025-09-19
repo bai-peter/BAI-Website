@@ -13,12 +13,14 @@ const Community: React.FC<CommunityProps> = ({ className }) => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-8 text-center">Contact</h2>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-4 text-center">Contact</h2>
           </FadeIn>
           
           <FadeIn delay={100}>
             <div className="text-center">
-              <p className="text-xl text-muted-foreground">team@baifunds.com for inquiries</p>
+              <p className="text-xl text-muted-foreground">
+                team@baifunds.com for inquiries
+              </p>
             </div>
           </FadeIn>
         </div>
