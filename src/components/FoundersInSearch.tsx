@@ -13,7 +13,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Peter Bai",
       role: "Founder & Managing Partner",
       description:
-        "Former quant developer on the Macro desk at University Pension Plan (FX, Equity TRS, Repo), ex-Equity Markets quant at TMX Group, and prior venture investor at HCS Capital focusing on insurtech and fintech. Leads strategy, macro overlay, and institutional partnerships.",
+        "Former Macro desk quant dev at UPP (FX, Equity TRS, Repo) and TMX Equity Markets quant; ex-VC at HCS (insurtech/fintech). Leads strategy, macro overlay, and LP relationships.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
@@ -21,7 +21,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
       description:
-        "Systems, ML/AI, and signal engineering. Leads the design and reliability of our real-time modeling, data pipelines, and execution systems; background across applied ML, perception, and production-grade infrastructure.",
+        "Systems/ML engineer focused on real-time modeling, data pipelines, and execution reliability. Drives production-grade signal engineering and platform scalability.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
@@ -29,7 +29,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Josephina Kim",
       role: "Head of Industry Research",
       description:
-        "Former quantitative analyst in Electronic Trading (Cash Equities) at BMO Capital Markets and prior venture investor at Render Capital. Brings industry microstructure insight and thematic research to inform signal development.",
+        "Former BMO Capital Markets electronic cash equities quant; ex-VC at Render. Brings market microstructure and thematic research to inform signal design.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
@@ -37,7 +37,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       name: "Frank Zou",
       role: "Head of Capital & Partnerships",
       description:
-        "Former Equity Markets quant at TMX Group. Focused on limited partner relationships, strategic partnerships, and capital formation to scale systematic strategies.",
+        "Former TMX Equity Markets quant. Leads LP relationships, strategic partnerships, and capital formation for scaling strategies.",
       image: "/lovable-uploads/BAI Emblem.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
