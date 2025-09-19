@@ -1,7 +1,7 @@
 # BAI Website Development Log
 
 ## Project Overview
-**Project Name**: BAI Funds Website (baifunds.com)  
+**Project Name**: BAI Funds (Bai Awan Investments) Website (baifunds.com)  
 **Technology Stack**: React + TypeScript + Vite + Tailwind CSS  
 **Hosting**: GitHub Pages with custom domain  
 **Repository**: bai-peter/BAI-Website  

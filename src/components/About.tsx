@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 </div>
                 
                 <p className="text-lg text-muted-foreground">
-                  BAI Funds (Bai Awan Investments) combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
+                  BAI Funds combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
                 </p>
                 
                 <p className="text-lg text-muted-foreground">

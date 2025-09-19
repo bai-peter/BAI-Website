@@ -27,7 +27,7 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <FadeIn delay={150}>
               <div className="p-6 border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Funds</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Funds (Bai Awan Investments)</h3>
                 <p className="text-muted-foreground">
                   The hedge fund entity that deploys capital and generates returns through systematic behavioral insights.
                 </p>
