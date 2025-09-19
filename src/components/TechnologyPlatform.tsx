@@ -51,7 +51,7 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
   ];
 
   return (
-    <section id="technology" className={cn('py-20 md:py-32 bg-background', className)}>
+    <section id="technology" className={cn('py-20 md:py-32 bg-background relative z-10', className)}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>

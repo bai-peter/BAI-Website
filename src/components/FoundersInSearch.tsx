@@ -51,7 +51,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   };
 
   return (
-    <section id="team" className={cn('py-20 md:py-32 bg-card', className)}>
+    <section id="team" className={cn('py-20 md:py-32 bg-card relative z-10', className)}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto mb-16">
           <FadeIn>
