@@ -33,13 +33,13 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             
             <FadeIn delay={200}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-sans font-bold tracking-tight text-foreground leading-tight mb-8">
-                Structure Breeds Signal
+                Multi-Agent AI Research
               </h1>
             </FadeIn>
             
             <FadeIn delay={300}>
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-12 max-w-3xl mx-auto">
-                We use artificial intelligence to systematically detect and trade against human behavioral errors in the market
+                Specialized AI agents working in coordinated teams to systematically analyze global markets from macro conditions to individual stock selection
               </p>
             </FadeIn>
             

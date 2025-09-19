@@ -10,38 +10,38 @@ interface GapProps {
 const Gap: React.FC<GapProps> = ({ className }) => {
   const strategies = [
     {
-      title: "Factor Alpha",
-      description: "Long-term equity factor premiums leveraging value, quality, and momentum signals",
-      details: "Systematic exposure to well-documented market factors with enhanced alpha generation"
+      title: "Multi-Agent Research",
+      description: "Specialized AI agents analyze macro, sector, and stock-level opportunities systematically",
+      details: "Coordinated team of AI agents each focused on specific analysis domains for comprehensive market coverage"
     },
     {
-      title: "Gap Mean-Reversion", 
-      description: "Intraday gap-filling opportunities through systematic pattern recognition",
-      details: "High-frequency strategies targeting price inefficiencies in opening gaps"
+      title: "Systematic Signal Integration", 
+      description: "Multi-lens analysis combining fundamental, technical, sentiment, and behavioral signals",
+      details: "Advanced signal fusion algorithms that weight and combine diverse market signals for robust decision making"
     },
     {
-      title: "Behavioral Alpha",
-      description: "Exploiting market inefficiencies through behavioral finance insights",
-      details: "AI-driven detection of cognitive biases and sentiment-driven mispricings"
+      title: "Adaptive Learning",
+      description: "Continuous model updates and performance feedback loops for evolving market conditions",
+      details: "AI agents that learn from market feedback and adapt strategies as market regimes change"
     }
   ];
 
   const infrastructure = [
     {
-      title: "Colocated Smart Order Routers",
-      icon: "⚡"
+      title: "Cloud-Native Architecture",
+      icon: "☁️"
     },
     {
-      title: "Web-scraped + Paid Feeds + Tick Data",
+      title: "Real-Time Data Integration",
       icon: "📊"
     },
     {
-      title: "GPU + Containerized ML Pipelines", 
-      icon: "🔬"
+      title: "Containerized AI Agents", 
+      icon: "🤖"
     },
     {
-      title: "Real-time VaR & Scenario Engines",
-      icon: "🛡️"
+      title: "Scalable Database Design",
+      icon: "🗄️"
     }
   ];
 
@@ -57,7 +57,7 @@ const Gap: React.FC<GapProps> = ({ className }) => {
           
           <FadeIn delay={100}>
             <p className="text-xl text-center text-muted-foreground mb-12">
-              Three systematic strategies powered by behavioral insights and advanced infrastructure
+              Multi-agent AI research system with systematic signal integration and adaptive learning capabilities
             </p>
           </FadeIn>
         </div>
