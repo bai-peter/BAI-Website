@@ -31,7 +31,6 @@ alwaysApply: true
    - Deployment status
    - Known issues or limitations
    - **CRITICAL**: Always check vite.config.ts target is 'es2020' before deployment
-   - **CRITICAL**: Test build locally with `npm run build` before pushing
 
 3. **Format consistently** using clear sections, bullet points, and technical details
 
