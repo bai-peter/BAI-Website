@@ -1,14 +1,14 @@
 # BAI Website Development Log
 
 ## Project Overview
-**Project Name**: BAI Awan Investments Website (baifunds.com)  
+**Project Name**: BAI Funds Website (baifunds.com)  
 **Technology Stack**: React + TypeScript + Vite + Tailwind CSS  
 **Hosting**: GitHub Pages with custom domain  
 **Repository**: bai-peter/BAI-Website  
 
 ## Project Goals
-- Create a professional, institutional-grade website for BAI Awan Investments
-- Establish strong SEO presence for BAI Awan Investments keywords
+- Create a professional, institutional-grade website for BAI Funds (Bai Awan Investments)
+- Establish strong SEO presence for BAI Funds keywords
 - Implement modern, responsive design with smooth animations
 - Deploy successfully on GitHub Pages with custom domain
 - Optimize for search engines and user experience

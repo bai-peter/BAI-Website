@@ -13,7 +13,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center">About BAI Awan Investments</h2>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center">About BAI Funds</h2>
           </FadeIn>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -25,7 +25,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 </div>
                 
                 <p className="text-lg text-muted-foreground">
-                  BAI Awan Investments combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
+                  BAI Funds (Bai Awan Investments) combines cutting-edge artificial intelligence with deep behavioral finance expertise to systematically detect and exploit market inefficiencies.
                 </p>
                 
                 <p className="text-lg text-muted-foreground">

@@ -1,6 +1,6 @@
 # BAI Website
 
-A professional, institutional-grade website for **BAI Awan Investments** - a quantitative hedge fund that uses artificial intelligence to systematically detect and trade against human behavioral errors in financial markets.
+A professional, institutional-grade website for **BAI Funds** (Bai Awan Investments) - a quantitative hedge fund that uses artificial intelligence to systematically detect and trade against human behavioral errors in financial markets.
 
 🌐 **Live Site**: [baifunds.com](https://baifunds.com)
 
@@ -205,7 +205,7 @@ npm run lint         # Run ESLint
 
 ## 📄 License
 
-This project is proprietary to BAI Awan Investments.
+This project is proprietary to BAI Funds (Bai Awan Investments).
 
 ## 🤝 Contributing
 
