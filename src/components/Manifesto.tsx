@@ -20,14 +20,14 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           
           <FadeIn delay={100}>
             <p className="text-xl md:text-2xl leading-relaxed mb-8 text-center">
-              BAI is a quantitative hedge fund with two internal arms:
+              BAI Awan Investments is a quantitative hedge fund with two internal arms:
             </p>
           </FadeIn>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <FadeIn delay={150}>
               <div className="p-6 border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI (Behavioral Alpha Investments)</h3>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">BAI Awan Investments</h3>
                 <p className="text-muted-foreground">
                   The hedge fund entity that deploys capital and generates returns through systematic behavioral insights.
                 </p>
