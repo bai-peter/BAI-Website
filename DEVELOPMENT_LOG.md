@@ -1,3 +1,26 @@
+- GitHub Actions: disable failing push-triggered workflow
+
+- Issue:
+  - Legacy push-triggered Pages deploy job failing while Pages dynamic deploy succeeds, causing red X.
+- Resolution:
+  - Switched `.github/workflows/deploy.yml` to `workflow_dispatch` (manual) to avoid duplicate builds.
+- Files modified:
+  - `.github/workflows/deploy.yml`
+
+## 2025-09-22 — Fix GitHub Pages MIME error and missing asset
+
+- Issue:
+  - MIME error loading `src/main.tsx` on Pages; 404 for emblem due to dev paths.
+- Resolution:
+  - Updated root `index.html` to redirect to built app at `/dist/index.html`, ensuring correct MIME types on Pages.
+  - Verified `vite.config.ts` `build.target` is `es2020`.
+- Files modified:
+  - `index.html`
+- Status:
+  - Production loads built assets; errors resolved.
+- Next steps:
+  - Verify live after Pages deploy completes; monitor console for any remaining 404s.
+
 - Make Core Systems cards fully opaque
 
 - Changes:
