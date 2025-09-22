@@ -1,3 +1,48 @@
+- Make Core Systems cards fully opaque
+
+- Changes:
+  - Set global `.group.border.rounded-lg` background to fully opaque `bg-card`.
+  - Updated Core Systems cards to use `bg-card` (no alpha) with solid hover.
+- Files modified:
+  - `src/index.css`
+  - `src/components/TechnologyPlatform.tsx`
+
+- Fix team card expansion to be per-card, not global
+
+- Changes:
+  - Replaced single `expandedCard` state with a `Set<number>` `expandedCards` to track multiple open cards independently.
+  - Updated toggle logic and UI conditions accordingly.
+- Files modified:
+  - `src/components/FoundersInSearch.tsx`
+
+- Adjust font sizing and contrast in Technology & Infrastructure → Core Systems cards
+
+- Changes:
+  - Increased title to `text-xl md:text-2xl`, body to `text-base md:text-lg` for readability.
+  - Set base fill to `bg-card/90` with `hover:bg-card` for solid background and better contrast.
+  - Kept borders consistent with `border border-border`.
+- Files modified:
+  - `src/components/TechnologyPlatform.tsx`
+
+## 2025-09-22 — Improve card background opacity for readability
+
+- Changes:
+  - Increased default opacity for outlined cards so background within borders is less transparent and text is more readable.
+  - Removed translucency on `.card-interactive` hover that previously reduced contrast.
+- Technical details:
+  - Edited `src/index.css`:
+    - Removed `hover:bg-muted/20` from `.card-interactive`.
+    - Added base fill for outlined group cards: `.group.border.rounded-lg { background-color: hsl(var(--card) / 0.9); }` and solid on hover.
+- Files modified:
+  - `src/index.css`
+- Issues encountered:
+  - None; Tailwind linter warnings (`@apply`, `@tailwind`) are expected and unchanged.
+- Status:
+  - Readability of card content increased without altering overall design language.
+- Next steps:
+  - Visual QA across light/dark modes and sections with busy backgrounds; tweak alpha if needed.
+  - If any cards still lack contrast, consider adding `backdrop-blur` or stronger `bg-card` in those contexts.
+
 ## 2025-09-22
 
 - Updated animated nodes to follow geometric grid globally and removed them from Hero to keep the video layer clean and unobstructed.
@@ -19,6 +64,7 @@
  - Increased max concurrent lines to 10 with sequential, randomized cooldown spawns (no bursts); each line fades independently.
  - Header improvements: dynamic anchor offsets use actual header height; header z-index raised above pulse layer to keep logo/nav visible; section headings no longer hidden under header.
  - Switched brand palette to grayscale: updated CSS variables for primary/accent to neutral grays; adjusted animated line colors to grayscale neon/white; components inherit new scheme via Tailwind tokens.
+- Deployed latest changes to GitHub Pages (main). Verified `vite.config.ts` target is `es2020` to avoid MIME issues. Expect propagation within a few minutes.
  - Refined anchor scrolling: both header nav and global links now subtract actual header height (with minimal extra spacing) to reduce excessive top gap when navigating to sections.
  - Increased global rounding: bumped `--radius` to 1rem and rounded cards/glass panels site-wide for softer edges.
 

@@ -94,12 +94,12 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
           <div className="bg-card border border-border p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Core Systems</h3>
             <div className="grid md:grid-cols-2 gap-6">
-              {infrastructure.map((item, index) => (
-                <div key={index} className="group p-6 border border-border/50 hover:bg-muted/20 rounded-lg transition-colors duration-300">
-                  <h4 className="text-lg font-semibold mb-3 text-foreground">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                </div>
-              ))}
+					{infrastructure.map((item, index) => (
+						<div key={index} className="group p-6 bg-card border border-border rounded-lg transition-colors duration-300 hover:bg-card">
+							<h4 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">{item.title}</h4>
+							<p className="text-base md:text-lg text-foreground/90 leading-relaxed">{item.description}</p>
+						</div>
+					))}
             </div>
           </div>
         </FadeIn>

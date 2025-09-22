@@ -230,7 +230,17 @@
   }
   
   .card-interactive {
-    @apply card-elevated hover:bg-muted/20 cursor-pointer transform hover:scale-[1.02] transition-all duration-300 ease-out;
+    @apply card-elevated cursor-pointer transform hover:scale-[1.02] transition-all duration-300 ease-out;
+  }
+
+  /* Ensure outlined cards with only borders get a readable fill */
+  .group.border.rounded-lg {
+    background-color: hsl(var(--card));
+    transition: background-color 300ms ease-out;
+  }
+
+  .group.border.rounded-lg:hover {
+    background-color: hsl(var(--card));
   }
   
   /* Equal height utilities */

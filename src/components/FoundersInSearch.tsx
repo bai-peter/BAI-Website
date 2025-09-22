@@ -9,7 +9,7 @@ interface FoundersInSearchProps {
 }
 
 const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const teamMembers = [
     {
@@ -47,7 +47,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   ];
 
   const toggleExpanded = (index: number) => {
-    setExpandedCard(expandedCard === index ? null : index);
+    setExpandedIndex(prev => (prev === index ? null : index));
   };
 
   return (
@@ -89,17 +89,17 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl">
+		<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl">
           {teamMembers.map((member, index) => (
-            <FadeIn key={index} delay={150 + index * 100}>
+			<FadeIn key={index} delay={150 + index * 100}>
               <Card 
                 className={cn(
-                  "card-interactive h-full",
-                  expandedCard === index ? "shadow-2xl bg-muted/30" : ""
+                  "card-interactive",
+                  expandedIndex === index ? "shadow-2xl bg-muted/30" : ""
                 )}
                 onClick={() => toggleExpanded(index)}
               >
-                <CardContent className="p-6 text-center h-full flex flex-col">
+                <CardContent className="p-6 text-center flex flex-col">
                   <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
                     <img 
                       src={member.image} 
@@ -121,12 +121,12 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                       LinkedIn
                     </a>
                     <span className="text-muted-foreground">•</span>
-                    <span className="text-xs text-muted-foreground">
-                      {expandedCard === index ? "Click to close" : "Learn More"}
+						<span className="text-xs text-muted-foreground">
+							{expandedIndex === index ? "Click to close" : "Learn More"}
                     </span>
                   </div>
 
-                  {expandedCard === index && (
+					{expandedIndex === index && (
                     <div className="mt-4 pt-4 border-t border-border">
                       <p className="text-xs text-muted-foreground leading-relaxed">
                         {member.fullDescription}
