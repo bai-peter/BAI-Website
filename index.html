@@ -9,15 +9,16 @@
     <meta http-equiv="Expires" content="0" />
     <!-- Cache busting timestamp: 2025-01-07T16:45:00Z -->
 
-    <!-- URL sanitizer: remove legacy SPA redirect query fragments -->
+    <!-- URL sanitizer: remove legacy SPA redirect query fragments (force reload) -->
     <script>
       (function () {
         try {
           var q = window.location.search;
           if (!q) return;
           if (q.includes('/dist/index.html') || q.includes('~and~')) {
-            var cleanUrl = window.location.origin + '/' + window.location.hash;
-            window.history.replaceState(null, '', cleanUrl);
+            var cleanUrl = window.location.origin + '/' + (window.location.hash || '');
+            // Force a full reload to purge cached HTML with old redirect
+            window.location.replace(cleanUrl);
           }
         } catch (e) { /* no-op */ }
       })();
