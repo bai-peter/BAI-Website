@@ -108,9 +108,18 @@
   <body>
     <div id="root"></div>
     
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Redirect to built app to avoid MIME issues on GitHub Pages -->
+    <script>
+      (function () {
+        var target = '/dist/index.html';
+        if (location.pathname !== '/dist/' && !location.pathname.startsWith('/dist/')) {
+          location.replace(target + location.search + location.hash);
+        }
+      })();
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=/dist/index.html" />
+    </noscript>
     
     <script>
       // Single Page Apps for GitHub Pages
