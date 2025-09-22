@@ -27,9 +27,16 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
       });
     } else {
       const element = document.getElementById(id);
+      const headerEl = document.querySelector('header');
+      const headerHeight = headerEl instanceof HTMLElement ? headerEl.offsetHeight : 120;
       if (element) {
+        // Prefer the first heading inside the section for precise alignment
+        const heading = element.querySelector('h1, h2, h3, h4');
+        const targetEl = (heading as HTMLElement) || element;
+        const rect = targetEl.getBoundingClientRect();
+        const absoluteTop = window.scrollY + rect.top;
         window.scrollTo({
-          top: element.offsetTop - 80, // Account for header height
+          top: absoluteTop - headerHeight - 16, // tiny bit more breathing room
           behavior: 'smooth'
         });
       }
@@ -39,10 +46,10 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+        'fixed top-0 left-0 right-0 z-[70] transition-all duration-300',
         isScrolled 
-          ? 'h-16 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm'
-          : 'h-20 bg-transparent',
+          ? 'h-16 bg-background/90 backdrop-blur-md border-b border-border/20 shadow-sm text-foreground'
+          : 'h-20 bg-transparent text-white',
         className
       )}
     >
@@ -60,11 +67,11 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         </button>
         
         <div className="hidden md:flex items-center space-x-8">
-          <NavLinks scrollToSection={scrollToSection} />
+          <NavLinks scrollToSection={scrollToSection} isScrolled={isScrolled} />
         </div>
         
         <button 
-          className="md:hidden flex items-center"
+          className="md:hidden flex items-center text-inherit"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -72,9 +79,9 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             "block w-6 transition-all duration-300",
             isMobileMenuOpen ? "opacity-0" : "opacity-100"
           )}>
-            <span className="block w-6 h-0.5 bg-foreground mb-1.5" />
-            <span className="block w-6 h-0.5 bg-foreground mb-1.5" />
-            <span className="block w-4 h-0.5 bg-foreground" />
+            <span className="block w-6 h-0.5 bg-current mb-1.5" />
+            <span className="block w-6 h-0.5 bg-current mb-1.5" />
+            <span className="block w-4 h-0.5 bg-current" />
           </span>
         </button>
       </div>
@@ -96,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         
         <nav className="flex flex-col space-y-6 text-lg">
           <button 
-            className="text-left hover:text-foreground transition-colors"
+            className="text-left hover:opacity-80 transition-colors"
             onClick={() => {
               scrollToSection('home');
               setIsMobileMenuOpen(false);
@@ -105,25 +112,25 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Home
           </button>
           <button 
-            className="text-left hover:text-foreground transition-colors"
+            className="text-left hover:opacity-80 transition-colors"
             onClick={() => {
               scrollToSection('about');
               setIsMobileMenuOpen(false);
             }}
           >
-            Who We Are
+            Our Firm
           </button>
           <button 
-            className="text-left hover:text-foreground transition-colors"
+            className="text-left hover:opacity-80 transition-colors"
             onClick={() => {
               scrollToSection('what-we-do');
               setIsMobileMenuOpen(false);
             }}
           >
-            What We Do
+            Our Approach
           </button>
           <button 
-            className="text-left hover:text-foreground transition-colors"
+            className="text-left hover:opacity-80 transition-colors"
             onClick={() => {
               scrollToSection('technology');
               setIsMobileMenuOpen(false);
@@ -132,13 +139,13 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Technology
           </button>
           <button 
-            className="text-left hover:text-foreground transition-colors"
+            className="text-left hover:opacity-80 transition-colors"
             onClick={() => {
               scrollToSection('team');
               setIsMobileMenuOpen(false);
             }}
           >
-            Careers
+            Our Team
           </button>
         </nav>
       </div>
@@ -148,14 +155,15 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
 
 interface NavLinksProps {
   scrollToSection: (id: string) => void;
+  isScrolled: boolean;
 }
 
-const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => {
+const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection, isScrolled }) => {
   const navItems = [
-    { id: 'about', label: 'Who We Are' },
-    { id: 'what-we-do', label: 'What We Do' },
+    { id: 'about', label: 'Our Firm' },
+    { id: 'what-we-do', label: 'Our Approach' },
     { id: 'technology', label: 'Technology' },
-    { id: 'team', label: 'Careers' },
+    { id: 'team', label: 'Our Team' },
   ];
 
   return (
@@ -164,7 +172,10 @@ const NavLinks: React.FC<NavLinksProps> = ({ scrollToSection }) => {
         <button
           key={item.id}
           onClick={() => scrollToSection(item.id)}
-          className="text-sm font-medium hover:text-foreground transition-colors"
+          className={cn(
+            "text-sm font-medium transition-colors",
+            isScrolled ? "text-foreground hover:opacity-80" : "text-white hover:opacity-80"
+          )}
         >
           {item.label}
         </button>

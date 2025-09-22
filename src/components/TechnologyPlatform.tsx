@@ -51,18 +51,21 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
   ];
 
   return (
-    <section id="technology" className={cn('py-20 md:py-32 bg-background relative z-10', className)}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto mb-16">
+    <section id="technology" className={cn('section-spacing bg-card relative z-10', className)}>
+      {/* Mellow geometric background */}
+      {/* Background chart is rendered globally in Index.tsx */}
+      
+      <div className="container mx-auto container-padding relative z-10">
+        <div className="max-w-5xl mx-auto content-spacing">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground text-balance">
-              Innovation at the Forefront of Finance
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center text-foreground text-balance">
+              Technology & Infrastructure
             </h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-large text-center text-foreground/90 mb-12 text-balance font-medium">
-              Our people are relentless in seeking a better way. Each day, we reimagine and refine our strategies, models and technology in pursuit of superior results and long-term performance.
+            <p className="text-xl md:text-2xl text-center text-muted-foreground mb-12 text-balance font-normal">
+              We build and maintain sophisticated technology infrastructure that enables our research teams to develop, test, and deploy quantitative strategies at scale with institutional-grade reliability and performance.
             </p>
           </FadeIn>
         </div>

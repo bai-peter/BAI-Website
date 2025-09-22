@@ -51,42 +51,45 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   };
 
   return (
-    <section id="team" className={cn('py-20 md:py-32 bg-card relative z-10', className)}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto mb-16">
+    <section id="team" className={cn('section-spacing bg-background relative z-10', className)}>
+      {/* Mellow geometric background */}
+      {/* Background chart is rendered globally in Index.tsx */}
+      
+      <div className="container mx-auto container-padding relative z-10">
+        <div className="max-w-5xl mx-auto content-spacing">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-center text-foreground">A Team Where Every Mind Counts</h2>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center text-foreground">Our Team</h2>
           </FadeIn>
           
           <FadeIn delay={100}>
-            <p className="text-xl text-center text-foreground/90 font-medium mb-12">
-              From seasoned leaders to new recruits, every member of our team helps develop and execute on powerful insights. We bring together brilliant minds to do what others consider impossible.
+            <p className="text-xl md:text-2xl text-center text-muted-foreground font-normal mb-12">
+              Our team combines deep quantitative expertise with cutting-edge technology development, bringing together researchers, engineers, and traders to advance the frontiers of systematic investing.
             </p>
           </FadeIn>
           
           <FadeIn delay={200}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-1">4</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">4</div>
                 <div className="text-sm text-muted-foreground">Founding Team</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-1">100%</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">100%</div>
                 <div className="text-sm text-muted-foreground">Advanced Degrees</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-1">3</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">3</div>
                 <div className="text-sm text-muted-foreground">Top Universities</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-1">$13B+</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">$13B+</div>
                 <div className="text-sm text-muted-foreground">Combined AUM Experience</div>
               </div>
             </div>
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl">
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100}>
               <Card 
@@ -96,18 +99,18 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                 )}
                 onClick={() => toggleExpanded(index)}
               >
-                <CardContent className="p-8 text-center h-full flex flex-col">
-                  <div className="w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
+                <CardContent className="p-6 text-center h-full flex flex-col">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-24 h-24 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{member.name}</h3>
-                  <p className="text-muted-foreground font-medium mb-6 text-small flex-grow">{member.role}</p>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">{member.name}</h3>
+                  <p className="text-muted-foreground font-medium mb-4 text-sm flex-grow">{member.role}</p>
                   
-                  <div className="flex items-center justify-center gap-3">
+                  <div className="flex items-center justify-center gap-3 mb-4">
                     <a
                       href={member.linkedin}
                       target="_blank"
@@ -124,8 +127,8 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                   </div>
 
                   {expandedCard === index && (
-                    <div className="mt-6 pt-6 border-t border-border">
-                      <p className="text-small text-muted-foreground leading-relaxed">
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <p className="text-xs text-muted-foreground leading-relaxed">
                         {member.fullDescription}
                       </p>
                     </div>

@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
       const element = document.getElementById(id);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop - 80,
+          top: element.offsetTop - 120,
           behavior: 'smooth'
         });
       }
@@ -43,13 +43,13 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               onClick={() => scrollToSection('about')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              Who We Are
+              Our Firm
             </button>
             <button
               onClick={() => scrollToSection('what-we-do')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              What We Do
+              Our Approach
             </button>
             <button
               onClick={() => scrollToSection('technology')} 
@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               onClick={() => scrollToSection('team')} 
               className="text-sm hover:text-foreground transition-colors"
             >
-              Careers
+              Our Team
             </button>
           </div>
           

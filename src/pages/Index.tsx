@@ -9,6 +9,7 @@ import TechnologyPlatform from '@/components/TechnologyPlatform';
 import About from '@/components/About';
 import Community from '@/components/Community';
 import Footer from '@/components/Footer';
+import BackgroundChart from '@/components/BackgroundChart';
 
 const Index = () => {
   useEffect(() => {
@@ -21,9 +22,15 @@ const Index = () => {
         if (!targetId) return;
         
         const targetElement = document.getElementById(targetId);
+        const headerEl = document.querySelector('header');
+        const headerHeight = headerEl instanceof HTMLElement ? headerEl.offsetHeight : 120;
         if (targetElement) {
+          const heading = targetElement.querySelector('h1, h2, h3, h4');
+          const targetEl = (heading as HTMLElement) || targetElement;
+          const rect = targetEl.getBoundingClientRect();
+          const absoluteTop = window.scrollY + rect.top;
           window.scrollTo({
-            top: targetElement.offsetTop - 80, // Account for header height
+            top: absoluteTop - headerHeight - 16, // tiny bit more gap
             behavior: 'smooth'
           });
         }
@@ -41,6 +48,8 @@ const Index = () => {
   
   return (
     <main className="relative">
+      {/* Global far-background chart (hidden over hero) */}
+      <BackgroundChart />
       <Header />
       <Hero />
       <Manifesto />

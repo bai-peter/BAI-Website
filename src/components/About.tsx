@@ -9,47 +9,50 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ className }) => {
   return (
-    <section id="about" className={cn('py-20 md:py-32 bg-card relative z-10', className)}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-4xl mx-auto">
+    <section id="about" className={cn('section-spacing bg-background relative z-10', className)}>
+      {/* Mellow geometric background */}
+      {/* Background chart is rendered globally in Index.tsx */}
+      
+      <div className="container mx-auto container-padding relative z-10">
+        <div className="max-w-5xl mx-auto content-spacing">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-12 text-center text-foreground text-balance">Who We Are</h2>
+            <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center text-foreground text-balance">Our Firm</h2>
           </FadeIn>
           
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <FadeIn delay={100}>
               <div className="space-y-6 h-full flex flex-col">
                 <div>
-                  <span className="text-sm font-semibold text-bai-primary mb-2 inline-block uppercase tracking-wide">Our Ambition</span>
-                  <h3 className="text-2xl font-semibold mb-6 text-foreground">To be the most profitable hedge fund in Canada through AI-native automation</h3>
+                  <span className="text-sm font-semibold text-bai-primary mb-2 inline-block uppercase tracking-wide">Our Mission</span>
+                  <h3 className="text-2xl font-semibold mb-6 text-foreground">Advancing quantitative investing through innovative AI-driven research and systematic execution</h3>
                 </div>
                 
                 <p className="text-readable mb-6">
-                  We strive to identify the highest and best uses of capital to generate superior long-term returns for the world's preeminent institutions through the world's first fully automated multi-agent AI research and trading system.
+                  We develop sophisticated quantitative strategies that leverage advanced machine learning and systematic research to identify market opportunities and generate alpha across global markets.
                 </p>
                 
                 <p className="text-readable mb-8">
-                  Our specialized AI agents work in coordinated teams, each becoming an expert in their domain while collaborating to provide complete market analysis from global macro regimes down to individual stock selection.
+                  Our multi-agent AI systems operate with institutional-grade infrastructure, conducting comprehensive market analysis and executing strategies with precision, scalability, and continuous adaptation to evolving market conditions.
                 </p>
                 
                 <div className="pt-6 border-t border-border">
-                  <h4 className="text-xl font-semibold mb-6 text-foreground">Innovation at the Forefront of Finance</h4>
+                  <h4 className="text-xl font-semibold mb-6 text-foreground">Core Capabilities</h4>
                   <ul className="space-y-4 text-muted-foreground">
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-bai-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Multi-agent AI research methodology that eliminates human bias</span>
+                      <span>Advanced machine learning models for systematic market analysis</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-bai-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Systematic analysis from global macro to individual stock selection</span>
+                      <span>Multi-factor research across global macro and micro market dynamics</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-bai-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Fully automated execution with zero human intervention</span>
+                      <span>Institutional-grade execution infrastructure with minimal latency</span>
                     </li>
                     <li className="flex items-start">
                       <div className="w-2 h-2 bg-bai-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span>Continuous learning and adaptation to market regimes</span>
+                      <span>Continuous model refinement and adaptive strategy optimization</span>
                     </li>
                   </ul>
                 </div>
@@ -59,11 +62,11 @@ const About: React.FC<AboutProps> = ({ className }) => {
             <FadeIn delay={200}>
               <div className="bg-card border border-border p-8 space-y-8 rounded-lg h-full flex flex-col">
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-bai-gold/20 to-bai-navy/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-28 h-28 bg-gradient-to-br from-bai-gold/20 to-bai-navy/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <img 
                       src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
                       alt="BAI Logo"
-                      className="w-16 h-auto opacity-90 object-contain"
+                      className="w-20 h-auto opacity-90 object-contain"
                     />
                   </div>
                   <h4 className="text-2xl font-semibold mb-2 text-foreground">Key Metrics</h4>

@@ -4,57 +4,57 @@
 
 @layer base {
   :root {
-    /* Enhanced Grayscale Palette - Optimized for readability */
-    --white: 0 0% 98%;           /* #FAFAFA - Pure white for text */
-    --light-gray: 0 0% 85%;      /* #D9D9D9 - Light gray for secondary text */
-    --medium-gray: 0 0% 70%;     /* #B3B3B3 - Medium gray for muted text */
-    --dark-gray: 0 0% 50%;       /* #808080 - Dark gray for borders */
-    --black: 0 0% 8%;            /* #141414 - Near black for backgrounds */
+    /* Sophisticated Neutral Palette - Inspired by top quant firms */
+    --white: 0 0% 100%;          /* #FFFFFF - Pure white */
+    --light-gray: 0 0% 96%;      /* #F5F5F5 - Very light gray */
+    --medium-gray: 0 0% 85%;     /* #D9D9D9 - Light gray */
+    --dark-gray: 0 0% 45%;       /* #737373 - Dark gray */
+    --black: 0 0% 5%;            /* #0D0D0D - Near black */
     
-    /* BAI Brand Colors - Enhanced for better contrast */
-    --bai-primary: 0 0% 68%;     /* #A7A6A5 - Logo color with better contrast */
-    --bai-primary-light: 0 0% 78%; /* Lighter version for hover states */
-    --bai-primary-dark: 0 0% 58%;  /* Darker version for depth */
-    --bai-accent: 0 0% 45%;      /* Darker accent for secondary elements */
-    --bai-accent-light: 0 0% 60%; /* Lighter accent */
-    --bai-muted: 0 0% 65%;       /* Muted text with better readability */
-    --bai-subtle: 0 0% 12%;      /* Subtle backgrounds */
-    --bai-highlight: 0 0% 20%;   /* Highlight backgrounds */
+    /* Brand Colors (Grayscale variant) */
+    --bai-primary: 0 0% 20%;        /* dark gray */
+    --bai-primary-light: 0 0% 35%;  /* medium-dark gray for hover */
+    --bai-primary-dark: 0 0% 10%;   /* near black */
+    --bai-accent: 0 0% 40%;         /* medium gray accent */
+    --bai-accent-light: 0 0% 55%;   /* lighter gray */
+    --bai-muted: 0 0% 60%;       /* #999999 - Muted text */
+    --bai-subtle: 0 0% 8%;       /* #141414 - Subtle backgrounds */
+    --bai-highlight: 0 0% 15%;   /* #262626 - Highlight backgrounds */
 
-    /* Core UI Colors - Enhanced for better readability */
-    --background: var(--black);
-    --foreground: var(--white);
+    /* Core UI Colors - Clean institutional palette */
+    --background: var(--white);
+    --foreground: var(--black);
 
-    --card: 0 0% 4%;
-    --card-foreground: var(--white);
+    --card: 0 0% 98%;
+    --card-foreground: var(--black);
 
-    --popover: 0 0% 6%;
-    --popover-foreground: var(--white);
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--black);
 
     --primary: var(--bai-primary);
-    --primary-foreground: var(--black);
+    --primary-foreground: var(--white);
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: var(--white);
+    --secondary: 0 0% 96%;
+    --secondary-foreground: var(--black);
 
-    --muted: 0 0% 8%;
-    --muted-foreground: var(--light-gray);
+    --muted: 0 0% 85%;
+    --muted-foreground: var(--dark-gray);
 
     --accent: var(--bai-accent);
-    --accent-foreground: var(--white);
+    --accent-foreground: var(--black);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: var(--white);
 
-    --border: 0 0% 18%;
-    --input: 0 0% 10%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
     --ring: var(--bai-primary);
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Enhanced Typography Hierarchy - Better contrast ratios */
-    --text-primary: var(--white);
-    --text-secondary: var(--light-gray);
+    /* Enhanced Typography Hierarchy - Clean institutional look */
+    --text-primary: var(--black);
+    --text-secondary: var(--dark-gray);
     --text-muted: var(--medium-gray);
     --text-accent: var(--bai-primary);
     --text-subtle: var(--dark-gray);
@@ -117,49 +117,58 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif tracking-tight text-foreground font-bold;
+    @apply font-sans tracking-tight text-foreground font-bold;
   }
   
   h1 {
     @apply text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    font-weight: 700;
   }
   
   h2 {
     @apply text-4xl md:text-5xl font-bold leading-tight tracking-tight;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.025em;
+    font-weight: 600;
   }
   
   h3 {
     @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    font-weight: 600;
   }
   
   h4 {
-    @apply text-xl md:text-2xl font-semibold leading-snug tracking-tight;
+    @apply text-2xl md:text-3xl font-semibold leading-snug tracking-tight;
+    font-weight: 500;
   }
   
   h5 {
-    @apply text-lg md:text-xl font-semibold leading-snug;
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+    font-weight: 500;
   }
   
   h6 {
-    @apply text-base md:text-lg font-semibold leading-snug;
+    @apply text-lg md:text-xl font-semibold leading-snug;
+    font-weight: 500;
   }
   
   p {
     @apply text-base md:text-lg leading-relaxed text-muted-foreground;
     line-height: 1.7;
+    font-weight: 400;
   }
   
   .text-large {
     @apply text-xl md:text-2xl leading-relaxed text-foreground;
     line-height: 1.6;
+    font-weight: 400;
   }
   
   .text-small {
     @apply text-sm md:text-base leading-relaxed text-muted-foreground;
     line-height: 1.6;
+    font-weight: 400;
   }
   
   .text-muted {
@@ -202,22 +211,26 @@
     @apply text-bai-primary font-medium;
   }
   
-  /* Better spacing utilities */
+  /* Generous spacing utilities - inspired by top quant firms */
   .section-spacing {
     @apply py-16 md:py-24 lg:py-32;
   }
   
   .container-padding {
-    @apply px-4 md:px-6 lg:px-8;
+    @apply px-6 md:px-8 lg:px-12;
   }
   
-  /* Enhanced card styles */
+  .content-spacing {
+    @apply space-y-8 md:space-y-12 lg:space-y-16;
+  }
+  
+  /* Sophisticated card styles - clean and minimal */
   .card-elevated {
-    @apply bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300;
+    @apply bg-card border border-border rounded-2xl shadow-sm hover:shadow-lg transition-all duration-500 ease-out;
   }
   
   .card-interactive {
-    @apply card-elevated hover:bg-muted/30 cursor-pointer;
+    @apply card-elevated hover:bg-muted/20 cursor-pointer transform hover:scale-[1.02] transition-all duration-300 ease-out;
   }
   
   /* Equal height utilities */
@@ -233,13 +246,13 @@
     flex-shrink: 0;
   }
   
-  /* Button enhancements */
+  /* Sophisticated button styles */
   .btn-primary {
-    @apply bg-bai-primary text-black font-semibold px-6 py-3 rounded-lg hover:bg-bai-primary-light transition-all duration-300 shadow-sm hover:shadow-md;
+    @apply bg-bai-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-bai-primary-light transition-all duration-300 shadow-sm hover:shadow-lg transform hover:scale-105;
   }
   
   .btn-secondary {
-    @apply border-2 border-bai-primary text-foreground font-semibold px-6 py-3 rounded-lg hover:bg-bai-primary hover:text-black transition-all duration-300;
+    @apply border-2 border-bai-primary text-bai-primary font-semibold px-8 py-4 rounded-xl hover:bg-bai-primary hover:text-white transition-all duration-300 transform hover:scale-105;
   }
   
   /* Focus states for accessibility */
@@ -249,22 +262,187 @@
 }
 
 @layer components {
+  /* Mellow geometric patterns */
+  .geometric-pattern {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--bai-primary) / 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--bai-accent) / 0.03) 0%, transparent 50%);
+    background-size: 600px 600px;
+    background-position: 0 0, 300px 300px;
+  }
+
+  .data-grid-pattern {
+    background-image: 
+      linear-gradient(hsl(var(--bai-primary) / 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--bai-primary) / 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Animated floating nodes following geometric grid */
+  .floating-nodes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .node {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--bai-primary) / 0.7);
+    border-radius: 50%;
+    box-shadow: 
+      0 0 15px hsl(var(--bai-primary) / 0.5),
+      0 0 30px hsl(var(--bai-primary) / 0.3),
+      0 0 45px hsl(var(--bai-primary) / 0.1);
+    animation: 
+      follow-grid 12s linear infinite,
+      pulse-glow 3s ease-in-out infinite;
+    z-index: 2;
+  }
+
+  /* Nodes following the 40px grid pattern */
+  .node-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+
+  .node-2 {
+    top: 20%;
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 18s;
+  }
+
+  .node-3 {
+    top: 30%;
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 14s;
+  }
+
+  .node-4 {
+    top: 40%;
+    left: 70%;
+    animation-delay: 6s;
+    animation-duration: 16s;
+  }
+
+  .node-5 {
+    top: 50%;
+    left: 90%;
+    animation-delay: 8s;
+    animation-duration: 13s;
+  }
+
+  .node-6 {
+    top: 60%;
+    left: 10%;
+    animation-delay: 10s;
+    animation-duration: 17s;
+  }
+
+  .node-7 {
+    top: 70%;
+    left: 30%;
+    animation-delay: 12s;
+    animation-duration: 19s;
+  }
+
+  .node-8 {
+    top: 80%;
+    left: 50%;
+    animation-delay: 14s;
+    animation-duration: 15s;
+  }
+
+  .node-9 {
+    top: 90%;
+    left: 70%;
+    animation-delay: 16s;
+    animation-duration: 12s;
+  }
+
+  .node-10 {
+    top: 5%;
+    left: 50%;
+    animation-delay: 18s;
+    animation-duration: 20s;
+  }
+
   .glass-panel {
-    @apply backdrop-blur-md bg-white/40 border border-white/20 shadow-sm;
+    @apply backdrop-blur-md bg-white/80 border border-white/20 shadow-sm rounded-2xl;
+  }
+
+  /* Fixed far-background layer for patterns and nodes */
+  .background-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0; /* ensure visible above root background while staying behind content */
+    pointer-events: none;
+  }
+
+  /* Fixed foreground pulse layer for glowing heads rendered above sections */
+  .pulse-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 50; /* above section content (e.g., z-10) */
+    pointer-events: none;
+  }
+
+  /* Remove old floating nodes visuals entirely */
+  .floating-nodes, .node, .connection-line { display: none !important; }
+
+  /* Chart pulse animation along the SVG path */
+  .chart-pulse {
+    stroke-dasharray: 200 1000; /* pulse length then gap */
+    stroke-dashoffset: 0;
+    animation: chartPulse 5s linear infinite;
+  }
+
+  /* Hide background chart over hero section only */
+  section.relative.w-full.h-screen + .background-layer,
+  .hero-hide-background .background-layer,
+  section.relative.w-full.h-screen + .pulse-layer,
+  .hero-hide-background .pulse-layer {
+    display: none;
+  }
+
+  @keyframes chartPulse {
+    0% { stroke-dashoffset: 1000; opacity: 0.0; }
+    10% { opacity: 0.85; }
+    50% { opacity: 1; }
+    90% { opacity: 0.85; }
+    100% { stroke-dashoffset: 0; opacity: 0.0; }
   }
 
   .text-wrap-balance {
     text-wrap: balance;
   }
 
+  /* Smooth scroll reveal animations */
   .scroll-reveal {
-    @apply opacity-0 translate-y-4 transition-all duration-700;
+    @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
   }
   
   .scroll-reveal.revealed {
     @apply opacity-100 translate-y-0;
   }
 
+  /* Sophisticated hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:transform hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:shadow-bai-primary/20;
+  }
+
+  /* Mask animations for text reveals */
   .mask-container {
     @apply overflow-hidden;
   }
@@ -274,7 +452,7 @@
   }
 
   .reveal-text {
-    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
   }
 
   .stagger-1 {
@@ -288,6 +466,19 @@
   .stagger-3 {
     animation-delay: 0.3s;
   }
+
+  .stagger-4 {
+    animation-delay: 0.4s;
+  }
+
+  /* Subtle floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 6s ease-in-out infinite 3s;
+  }
 }
 
 @keyframes reveal {
@@ -298,6 +489,77 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes follow-grid {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  10% {
+    transform: translate(40px, 0) scale(1.2);
+    opacity: 0.8;
+  }
+  20% {
+    transform: translate(80px, 0) scale(1);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translate(120px, 0) scale(1.1);
+    opacity: 0.9;
+  }
+  40% {
+    transform: translate(160px, 0) scale(0.9);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(200px, 0) scale(1.3);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(160px, 40px) scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translate(120px, 80px) scale(1.1);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(80px, 120px) scale(0.8);
+    opacity: 0.5;
+  }
+  90% {
+    transform: translate(40px, 160px) scale(1.2);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(0, 200px) scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 15px hsl(var(--bai-primary) / 0.5),
+      0 0 30px hsl(var(--bai-primary) / 0.3),
+      0 0 45px hsl(var(--bai-primary) / 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 25px hsl(var(--bai-primary) / 0.8),
+      0 0 50px hsl(var(--bai-primary) / 0.5),
+      0 0 75px hsl(var(--bai-primary) / 0.2);
   }
 }
 

@@ -1,3 +1,51 @@
+## 2025-09-22
+
+- Updated animated nodes to follow geometric grid globally and removed them from Hero to keep the video layer clean and unobstructed.
+- Fixed scroll offset across `Index.tsx`, `Header.tsx`, and `Footer.tsx` to 120px to eliminate the video sliver when navigating to sections (e.g., "Our Approach").
+- Normalized spacing util classes: reduced `section-spacing` and `content-spacing` for better balance; adjusted Hero internal spacing.
+- Standardized typography scale (reduced h1–h3, paragraphs, and taglines) for institutional readability.
+- Refined Team section layout: tightened stats spacing, compact card layout, consistent text sizes.
+- Increased the About section logo size within "Key Metrics" (container to `w-28 h-28`, logo `w-20`).
+- Verified Vite build target remains `es2020` for GitHub Pages MIME compatibility.
+ - Converted section background layers (geometric patterns + nodes) to fixed-position so they remain stationary during scroll across all sections; disabled pointer events to avoid interaction issues.
+ - Replaced geometric backgrounds and nodes with a fixed far-background SVG chart (`BackgroundChart.tsx`) that renders a randomized upward-biased line with a glowing pulse. Applied to all sections except Hero. Removed prior floating nodes CSS.
+ - Restored visibility of randomized line animation by raising `.background-layer` stacking context (z-index from -10 to 0) while keeping `pointer-events: none` to avoid blocking interactions.
+ - Added fixed `.pulse-layer` to render glowing heads above content; ensured hidden over Hero only.
+ - Converted single line to multiple independently seeded lines with slower motion; smoothed volatility and reduced step rate; pulses now visibly lead the lines across sections including `#what-we-do`.
+ - Replaced dot heads with neon leading segment; applied `mix-blend-mode: screen` and glow to ensure visibility on white sections without overpowering dark ones; ensured Hero sits above pulses (no overlay on video).
+ - Added fade-out on completion and staggered spawning so new lines begin before previous complete; biased endpoints to land mid-to-top right for visually pleasing terminations.
+ - Removed endpoint targeting; lines now wander randomly with upward bias, still fading out at completion and spawning successors before completion for continuous flow.
+ - Slowed fade-out (opacity decays gently) and applied opacity to both trail and neon head so the entire line visibly fades.
+ - Increased max concurrent lines to 10 with sequential, randomized cooldown spawns (no bursts); each line fades independently.
+ - Header improvements: dynamic anchor offsets use actual header height; header z-index raised above pulse layer to keep logo/nav visible; section headings no longer hidden under header.
+ - Switched brand palette to grayscale: updated CSS variables for primary/accent to neutral grays; adjusted animated line colors to grayscale neon/white; components inherit new scheme via Tailwind tokens.
+ - Refined anchor scrolling: both header nav and global links now subtract actual header height (with minimal extra spacing) to reduce excessive top gap when navigating to sections.
+ - Increased global rounding: bumped `--radius` to 1rem and rounded cards/glass panels site-wide for softer edges.
+
+Files modified:
+- `src/components/Hero.tsx`
+- `src/components/About.tsx`
+- `src/components/FoundersInSearch.tsx`
+- `src/components/Manifesto.tsx`
+- `src/components/TechnologyPlatform.tsx`
+- `src/components/Community.tsx`
+- `src/pages/Index.tsx`
+- `src/components/Header.tsx`
+- `src/components/Footer.tsx`
+- `src/index.css`
+
+Issues addressed:
+- Floating nodes appearing over video; moved off Hero.
+- Section scroll landing offset showing video sliver; increased offset.
+- Excessive spacing and oversized type leading to cramped/uneven layout.
+
+Status:
+- Local dev server running on http://localhost:8080/ with HMR.
+
+Next steps:
+- Fine-tune node path randomness along grid; consider multi-path variants.
+- QA on multiple screen sizes; adjust offsets for mobile header height if needed.
+- Prepare for deploy; confirm assets and favicon behavior post-build.
 # BAI Website Development Log
 
 ## Project Overview
