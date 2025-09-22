@@ -39,12 +39,12 @@
     <link rel="canonical" href="https://baifunds.com" />
     
     <!-- Favicon and Icons - Multiple formats for maximum compatibility -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/BAI Emblem.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/BAI Emblem.png" />
-    <link rel="shortcut icon" href="/assets/BAI Emblem.png" />
-    <link rel="icon" href="/assets/BAI Emblem.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/BAI Emblem.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/BAI Emblem.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/BAI Emblem.png" />
+    <link rel="shortcut icon" href="./assets/BAI Emblem.png" />
+    <link rel="icon" href="./assets/BAI Emblem.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/BAI Emblem.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
@@ -108,18 +108,9 @@
   <body>
     <div id="root"></div>
     
-    <!-- Redirect to built app to avoid MIME issues on GitHub Pages -->
-    <script>
-      (function () {
-        var target = '/dist/index.html';
-        if (location.pathname !== '/dist/' && !location.pathname.startsWith('/dist/')) {
-          location.replace(target + location.search + location.hash);
-        }
-      })();
-    </script>
-    <noscript>
-      <meta http-equiv="refresh" content="0;url=/dist/index.html" />
-    </noscript>
+    <!-- Load built assets directly to avoid MIME issues and redirect loops -->
+    <script type="module" crossorigin src="./assets/index-DZ9_cynu.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BP0kmmsz.css">
     
     <script>
       // Single Page Apps for GitHub Pages
