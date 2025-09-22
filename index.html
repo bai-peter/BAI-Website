@@ -108,9 +108,11 @@
   <body>
     <div id="root"></div>
     
-    <!-- Redirect to built app to avoid MIME issues on GitHub Pages -->
+    <!-- Redirect to built app on production hosting (skip in local dev) -->
     <script>
       (function () {
+        var isLocalDev = (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+        if (isLocalDev) return;
         var target = '/dist/index.html';
         if (location.pathname !== '/dist/' && !location.pathname.startsWith('/dist/')) {
           location.replace(target + location.search + location.hash);
@@ -118,6 +120,7 @@
       })();
     </script>
     <noscript>
+      <!-- Keep production noscript redirect, but it will be ignored locally -->
       <meta http-equiv="refresh" content="0;url=/dist/index.html" />
     </noscript>
     
@@ -143,5 +146,8 @@
         }
       }(window.location))
     </script>
+
+    <!-- Vite dev entry (ignored in production redirect) -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

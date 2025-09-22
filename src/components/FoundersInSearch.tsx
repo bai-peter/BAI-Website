@@ -92,14 +92,14 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
 		<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl">
           {teamMembers.map((member, index) => (
 			<FadeIn key={index} delay={150 + index * 100}>
-              <Card 
+				<Card 
                 className={cn(
-                  "card-interactive",
-                  expandedIndex === index ? "shadow-2xl bg-muted/30" : ""
+						"card-interactive h-full",
+						expandedIndex === index ? "shadow-2xl bg-muted/30" : ""
                 )}
                 onClick={() => toggleExpanded(index)}
               >
-                <CardContent className="p-6 text-center flex flex-col">
+                <CardContent className="p-6 text-center h-full flex flex-col">
                   <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
                     <img 
                       src={member.image} 
