@@ -68,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           <div className="text-sm text-muted-foreground text-center md:text-right">
             <div>&copy; {new Date().getFullYear()} BAI Funds. All rights reserved.</div>
             <div className="text-xs mt-1">Private investment fund. Qualified investors only.</div>
-            <div className="text-xs mt-1">Contact: info@baifunds.com</div>
+            <div className="text-xs mt-1">Contact: team@baifunds.com</div>
           </div>
         </div>
       </div>

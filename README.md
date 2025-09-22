@@ -8,4 +8,4 @@ Description:
 - Professional, investor-focused website describing BAI’s quantitative research platform, technology, and team.
 - Built with React + TypeScript, styled with Tailwind, deployed via GitHub Pages.
 
-Contact: info@baifunds.com
+Contact: team@baifunds.com
