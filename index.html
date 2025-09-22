@@ -8,6 +8,20 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <!-- Cache busting timestamp: 2025-01-07T16:45:00Z -->
+
+    <!-- URL sanitizer: remove legacy SPA redirect query fragments -->
+    <script>
+      (function () {
+        try {
+          var q = window.location.search;
+          if (!q) return;
+          if (q.includes('/dist/index.html') || q.includes('~and~')) {
+            var cleanUrl = window.location.origin + '/' + window.location.hash;
+            window.history.replaceState(null, '', cleanUrl);
+          }
+        } catch (e) { /* no-op */ }
+      })();
+    </script>
     
     <!-- Primary SEO Meta Tags -->
     <title>BAI Funds (Bai Awan Investments) | AI-Powered Trading Against Human Behavioral Errors</title>
@@ -108,15 +122,58 @@
   <body>
     <div id="root"></div>
     
-    <!-- Redirect to built app on production hosting (skip in local dev) -->
+    <!-- Production asset loader: dynamically load built bundle via manifest (skip on localhost) -->
     <script>
       (function () {
         var isLocalDev = (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
         if (isLocalDev) return;
-        var target = '/dist/index.html';
-        if (location.pathname !== '/dist/' && !location.pathname.startsWith('/dist/')) {
-          location.replace(target + location.search + location.hash);
+
+        // If someone hits a /dist path, normalize back to root
+        if (location.pathname.startsWith('/dist/')) {
+          try {
+            window.history.replaceState(null, '', '/' + location.search + location.hash);
+          } catch (e) {
+            location.replace('/');
+          }
         }
+
+        function loadFromManifestAt(basePath) {
+          return fetch(basePath + '/.vite/manifest.json', { cache: 'no-store' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (manifest) {
+              if (!manifest) return false;
+
+              // Find entry: prefer src/main.tsx, else any isEntry, else index.html key
+              var entry = manifest['src/main.tsx'] || null;
+              if (!entry) {
+                for (var k in manifest) {
+                  if (manifest[k] && manifest[k].isEntry) { entry = manifest[k]; break; }
+                }
+              }
+              if (!entry && manifest['index.html']) entry = manifest['index.html'];
+              if (!entry) return false;
+
+              if (entry.css) {
+                entry.css.forEach(function (href) {
+                  var link = document.createElement('link');
+                  link.rel = 'stylesheet';
+                  link.href = basePath + '/' + href.replace(/^\/?/, '');
+                  document.head.appendChild(link);
+                });
+              }
+              var script = document.createElement('script');
+              script.type = 'module';
+              script.src = basePath + '/' + entry.file.replace(/^\/?/, '');
+              document.body.appendChild(script);
+              return true;
+            })
+            .catch(function () { return false; });
+        }
+
+        // Try root (Pages often serves manifest at "/.vite/manifest.json"), then /dist
+        loadFromManifestAt('')
+          .then(function (ok) { return ok ? true : loadFromManifestAt('/dist'); })
+          .catch(function () { /* no-op */ });
       })();
     </script>
     <noscript>
@@ -124,30 +181,9 @@
       <meta http-equiv="refresh" content="0;url=/dist/index.html" />
     </noscript>
     
-    <script>
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks to see if a redirect is present in the query string,
-      // converts it back into the correct url and adds it to the
-      // browser's history using window.history.replaceState(...),
-      // which won't cause the browser to attempt to load the new url.
-      // When the single page app is loaded further down in this file,
-      // the correct url will be waiting in the browser's history for
-      // the single page app to route accordingly.
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      }(window.location))
-    </script>
+    <!-- Removed legacy spa-github-pages redirect to avoid URL loop issues -->
 
-    <!-- Vite dev entry (ignored in production redirect) -->
+    <!-- Vite dev entry (ignored in production) -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

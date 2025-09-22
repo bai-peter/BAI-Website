@@ -1,3 +1,31 @@
+- Hotfix: Remove legacy SPA redirect loop
+
+- Changes:
+  - Deleted spa-github-pages redirect script from `index.html` to prevent recursive `/dist` URL query loops.
+  - Using manifest-based loader for production and Vite entry for dev.
+- Files modified:
+  - `index.html`
+
+### Deployment — 2025-09-22
+
+- Built with Vite (target es2020 per deployment rule) and pushed to `main`.
+- Dev improvements:
+  - Gated production redirect in `index.html` to avoid dev blank screen.
+  - Added Vite dev entry script for local mount.
+- UI changes included in this deploy:
+  - Card background opacity increases; Core Systems cards fully opaque.
+  - Team cards: single-open expansion, restored grid layout.
+- Files touched in this deploy:
+  - `index.html`
+  - `src/components/FoundersInSearch.tsx`
+  - `src/components/TechnologyPlatform.tsx`
+  - `src/index.css`
+- Issues:
+  - Local blank screen due to redirect—resolved via environment gating and dev entry.
+- Next:
+  - Verify GitHub Pages serves updated assets without MIME issues.
+  - Visual QA production.
+
 - Make Core Systems cards fully opaque
 
 - Changes:
