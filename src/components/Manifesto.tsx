@@ -55,28 +55,28 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           
           <FadeIn delay={250}>
             <div className="grid md:grid-cols-4 gap-12 text-center">
-              <div className="group hover-lift">
+              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
                 <div className="w-20 h-20 bg-bai-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-primary/20 transition-colors duration-300">
                   <div className="w-10 h-10 bg-bai-primary rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Macro Analysis</h4>
                 <p className="text-lg text-muted-foreground">Global market regime identification</p>
               </div>
-              <div className="group hover-lift">
+              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
                 <div className="w-20 h-20 bg-bai-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-accent/20 transition-colors duration-300">
                   <div className="w-10 h-10 bg-bai-accent rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Signal Generation</h4>
                 <p className="text-lg text-muted-foreground">Multi-factor model development</p>
               </div>
-              <div className="group hover-lift">
+              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
                 <div className="w-20 h-20 bg-bai-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-primary/20 transition-colors duration-300">
                   <div className="w-10 h-10 bg-bai-primary rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Portfolio Construction</h4>
                 <p className="text-lg text-muted-foreground">Risk-optimized allocation</p>
               </div>
-              <div className="group hover-lift">
+              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
                 <div className="w-20 h-20 bg-bai-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-accent/20 transition-colors duration-300">
                   <div className="w-10 h-10 bg-bai-accent rounded-full"></div>
                 </div>
