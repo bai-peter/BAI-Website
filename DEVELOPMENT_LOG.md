@@ -1,3 +1,12 @@
+- Fix 404s for built assets when serving from root
+
+- Issue:
+  - Root `index.html` referenced `./assets/...` which don’t exist at root; bundles live under `dist/assets/...`.
+- Resolution:
+  - Updated script and link tags to `./dist/assets/...` in root `index.html`.
+- Files modified:
+  - `index.html`
+
 - GitHub Actions: disable failing push-triggered workflow
 
 - Issue:
