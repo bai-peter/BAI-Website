@@ -80,9 +80,9 @@ const Gap: React.FC<GapProps> = ({ className }) => {
         </div>
 
         <FadeIn delay={300}>
-          <div className="bg-card border border-border p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Technical Infrastructure</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-card border border-border p-6 md:p-8 rounded-lg">
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-center text-foreground">Technical Infrastructure</h3>
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
               {infrastructure.map((item, index) => (
                 <div key={index} className="group text-center p-6 bg-card rounded-lg transition-colors duration-300 h-full flex flex-col justify-center relative z-20">
                   <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>

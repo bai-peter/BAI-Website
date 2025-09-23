@@ -99,7 +99,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mx-auto max-w-6xl px-4">
           {teamMembers.map((member, index) => (
             <FadeIn key={index} delay={150 + index * 100} className="relative z-20">
 				<Card 
@@ -111,11 +111,11 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                 onClick={() => toggleExpanded(index)}
               >
                 <CardContent className="p-6 text-left flex flex-col" style={{ backgroundColor: 'hsl(var(--card))' }}>
-                  <div className="w-40 h-40 mx-auto mb-4 bg-gradient-to-br from-bai-primary to-bai-accent rounded-full flex items-center justify-center transition-all duration-300">
+                  <div className="w-32 h-32 sm:w-36 sm:h-36 mx-auto mb-4 bg-gradient-to-br from-bai-primary to-bai-accent rounded-full flex items-center justify-center transition-all duration-300">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-36 h-36 object-cover rounded-full opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-full opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground truncate text-center">{member.name}</h3>
@@ -132,46 +132,46 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                       LinkedIn
                     </a>
                     <span className="text-muted-foreground">•</span>
-						<span className="text-xs text-muted-foreground">
-                            {expandedIndex === index ? "Click to close" : "Learn More"}
+                    <span className="text-xs text-muted-foreground">
+                      {expandedIndex === index ? "Click to close" : "Learn More"}
                     </span>
                   </div>
                 </CardContent>
               </Card>
 
               <Dialog open={expandedIndex === index} onOpenChange={(open) => setExpandedIndex(open ? index : null)}>
-                <DialogContent className="max-w-3xl bg-white border border-border p-8">
-                  <div className="flex items-start gap-6">
+                <DialogContent className="max-w-3xl bg-white border border-border p-6 sm:p-8 max-h-[80svh] overflow-y-auto">
+                  <div className="flex flex-col md:flex-row items-start gap-6">
                     <div className="flex flex-col items-center gap-3 flex-shrink-0">
-                      <div className="w-40 h-40 rounded-full bg-gradient-to-br from-bai-primary to-bai-accent flex items-center justify-center">
+                      <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-bai-primary to-bai-accent flex items-center justify-center">
                         <img
                           src={member.image}
                           alt={member.name}
-                          className="w-36 h-36 object-cover rounded-full"
+                          className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 object-cover rounded-full"
                         />
                       </div>
                       {member.logoPrimary && (
                         <img
                           src={member.logoPrimary}
                           alt="School logo"
-                          className="w-36 h-auto opacity-90"
+                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90"
                         />
                       )}
                       {member.logoSecondary && (
                         <img
                           src={member.logoSecondary}
                           alt="Additional school logo"
-                          className="w-36 h-auto opacity-90"
+                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90"
                         />
                       )}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-semibold text-foreground mb-1">{member.name}</h3>
-                      <p className="text-lg text-muted-foreground mb-1">{member.role}</p>
+                      <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-1">{member.name}</h3>
+                      <p className="text-base sm:text-lg text-muted-foreground mb-1">{member.role}</p>
                       {member.degree && (
                         <p className="text-sm text-muted-foreground mb-4">{member.degree}</p>
                       )}
-                      <p className="text-base text-muted-foreground leading-relaxed">
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                         {member.fullDescription}
                       </p>
                     </div>

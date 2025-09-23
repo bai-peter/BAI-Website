@@ -19,6 +19,17 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock background scroll when mobile menu is open
+  useEffect(() => {
+    const body = document.body;
+    if (isMobileMenuOpen) {
+      body.classList.add('overflow-hidden');
+    } else {
+      body.classList.remove('overflow-hidden');
+    }
+    return () => body.classList.remove('overflow-hidden');
+  }, [isMobileMenuOpen]);
+
   const scrollToSection = (id: string) => {
     if (id === 'home') {
       window.scrollTo({
@@ -55,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between h-full">
         <button 
-          onClick={() => scrollToSection('home')}
+          onClick={() => window.location.reload()}
           className="flex items-center transition-opacity hover:opacity-80 h-full"
         >
           <img 
@@ -86,20 +97,36 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
         </button>
       </div>
       
-      <div 
-        className={cn(
-          "fixed inset-0 bg-background z-40 flex flex-col pt-24 px-6 transition-transform duration-500 ease-in-out transform md:hidden",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <button 
-          className="absolute top-5 right-5 p-2"
+      <div className={cn("md:hidden", isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none")}> 
+        <div 
+          className={cn(
+            "fixed inset-0 bg-black/50 z-40 transition-opacity duration-300",
+            isMobileMenuOpen ? "opacity-100" : "opacity-0"
+          )}
           onClick={() => setIsMobileMenuOpen(false)}
-          aria-label="Close menu"
+        />
+        <div 
+          className={cn(
+            "fixed top-0 right-0 h-[100svh] w-[88vw] max-w-sm bg-background z-50 flex flex-col pt-12 px-6 border-l border-border shadow-xl transition-transform duration-300 ease-in-out",
+            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          )}
         >
-          <span className="block w-6 h-0.5 bg-foreground transform rotate-45 translate-y-0.5" />
-          <span className="block w-6 h-0.5 bg-foreground transform -rotate-45" />
-        </button>
+          <div className="flex items-center justify-between mb-4">
+            <img 
+              src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
+              alt="BAI" 
+              className="h-8 w-auto object-contain"
+              style={{ maxWidth: 'none' }}
+            />
+            <button 
+              className="p-2"
+              onClick={() => setIsMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <span className="block w-6 h-0.5 bg-foreground transform rotate-45 translate-y-0.5" />
+              <span className="block w-6 h-0.5 bg-foreground transform -rotate-45" />
+            </button>
+          </div>
         
         <nav className="flex flex-col space-y-6 text-lg">
           <button 
@@ -148,6 +175,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             Our Team
           </button>
         </nav>
+        </div>
       </div>
     </header>
   );

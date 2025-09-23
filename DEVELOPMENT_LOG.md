@@ -626,3 +626,57 @@ Next steps:
 - Deployment notes:
   - `vite.config.ts` target verified as 'es2020'.
   - Safe to deploy to GitHub Pages.
+
+### Session — 2025-09-23 (Mobile QA and fixes)
+
+- What we accomplished:
+  - Ran dual dev instances for side‑by‑side desktop/mobile QA; stabilized on a single dev server at `http://localhost:5173/` due to Windows shell piping issues.
+  - Verified Vite dev HMR availability via `/@vite/client` and resolved initial 404 by restarting server cleanly.
+  - Implemented core mobile fixes across hero, header, grids, and typography.
+- Technical changes:
+  - `src/components/Hero.tsx`:
+    - Replace `h-screen` with safe viewport unit `h-[100svh]` for mobile browsers.
+    - Add `hero-hide-background` marker on hero section to ensure background layers stay hidden over the video.
+    - Add `poster` and `preload="metadata"` to video for better mobile performance and fallback.
+  - `src/index.css`:
+    - Add `overflow-x-hidden` on `body` to prevent horizontal scroll on small screens.
+  - `src/components/Header.tsx`:
+    - Lock background scroll when mobile menu is open by toggling `overflow-hidden` on `<body>`.
+  - `src/components/FoundersInSearch.tsx`:
+    - Make grid 1‑col on xs, 2‑col on sm; reduce avatar sizes on small screens; adjust gaps and padding.
+  - `src/components/About.tsx`:
+    - Tighten metrics grid gaps on mobile and scale down numeric display sizes.
+  - `src/components/TechnologyPlatform.tsx`:
+    - Add responsive padding, reduce icon size on mobile, and scale headings/body for readability.
+  - `src/components/Gap.tsx`:
+    - Reduce padding/gaps for infra grid on small screens; responsive headings.
+- Files modified:
+  - `src/components/Hero.tsx`
+  - `src/components/Header.tsx`
+  - `src/components/FoundersInSearch.tsx`
+  - `src/components/About.tsx`
+  - `src/components/TechnologyPlatform.tsx`
+  - `src/components/Gap.tsx`
+  - `src/index.css`
+- Issues encountered:
+  - Windows PowerShell `| cat` caused errors; avoided piping and ran Vite directly.
+  - Initial 404s from dev server due to process lifecycle; resolved with clean foreground/background starts.
+- Current status:
+  - Dev server running at `http://localhost:5173/` with HMR; mobile emulation works via Chrome device toolbar.
+  - Sections render without horizontal overflow; hero fills safe viewport on iOS/Android.
+- Next steps:
+  - Full click‑through QA of mobile menu links and anchor offsets across breakpoints.
+  - Verify GitHub Pages deploy still uses `target: 'es2020'` (vite.config.ts already compliant).
+
+### Deployment — 2025-09-23 (Mobile polish)
+
+- Changes included:
+  - Mobile hero height fix (100svh), overflow-x prevention.
+  - Header mobile menu: solid slide-over with overlay, logo, single close.
+  - Team modal: restored stable sizing with scrollable content; explicit Learn More/Close text.
+  - Grid/spacing tweaks across `FoundersInSearch`, `About`, `TechnologyPlatform`, `Gap`.
+- Files modified:
+  - `src/components/Hero.tsx`, `src/index.css`, `src/components/Header.tsx`, `src/components/FoundersInSearch.tsx`, `src/components/About.tsx`, `src/components/TechnologyPlatform.tsx`, `src/components/Gap.tsx`.
+- Deployment status:
+  - `vite.config.ts` target confirmed `'es2020'`.
+  - Pushing to `main` to trigger GitHub Pages deploy.

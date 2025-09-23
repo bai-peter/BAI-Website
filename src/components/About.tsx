@@ -72,21 +72,21 @@ const About: React.FC<AboutProps> = ({ className }) => {
                   <h4 className="text-2xl font-semibold mb-2 text-foreground">Key Metrics</h4>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">2025</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-bai-primary mb-1">2025</div>
                     <div className="text-sm text-muted-foreground">Founded</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">93.3%</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-bai-primary mb-1">93.3%</div>
                     <div className="text-sm text-muted-foreground">Trade Win Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">+5.30%</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-bai-primary mb-1">+5.30%</div>
                     <div className="text-sm text-muted-foreground">Avg Return per Trade</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">4 days</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-bai-primary mb-1">4 days</div>
                     <div className="text-sm text-muted-foreground">Avg Holding Period</div>
                   </div>
                 </div>

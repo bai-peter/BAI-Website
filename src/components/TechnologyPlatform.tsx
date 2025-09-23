@@ -70,18 +70,18 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
           </FadeIn>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 px-4">
           {capabilities.map((capability, index) => (
             <FadeIn key={index} delay={150 + index * 50}>
               <Card className="card-interactive h-full relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
                 <CardContent className="p-8 h-full flex flex-col">
-                  <div className="flex items-start space-x-6 flex-grow">
-                    <div className="w-16 h-16 bg-bai-primary rounded-lg flex items-center justify-center text-2xl transition-colors duration-300 flex-shrink-0">
+                  <div className="flex items-start gap-4 md:gap-6 flex-grow">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-bai-primary rounded-lg flex items-center justify-center text-xl md:text-2xl transition-colors duration-300 flex-shrink-0">
                       {capability.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-semibold mb-4 text-foreground">{capability.title}</h3>
-                      <p className="text-readable">{capability.description}</p>
+                      <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-4 text-foreground">{capability.title}</h3>
+                      <p className="text-readable text-sm md:text-base">{capability.description}</p>
                     </div>
                   </div>
                 </CardContent>

@@ -8,14 +8,16 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
-    <section className={cn('relative w-full h-screen overflow-hidden z-[60]', className)}>
-      <div className="absolute inset-0 -z-10 w-full h-screen">
+    <section className={cn('relative w-full h-[100svh] hero-hide-background overflow-hidden z-[60]', className)}>
+      <div className="absolute inset-0 -z-10 w-full h-[100svh]">
         {/* Video Background */}
         <video 
           autoPlay 
           muted 
           loop 
           playsInline
+          preload="metadata"
+          poster="/og-image.png"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'none' }}
         >
