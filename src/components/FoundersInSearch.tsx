@@ -47,7 +47,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Frank Zou",
       role: "Head of Capital Markets",
-      degree: "B.MOS, Finance",
+      degree: "B.MOS, Finance (Advanced Entry Opportunity to Ivey Business School)",
       logoPrimary: "/assets/Huron Logo.png",
       fullDescription:
         "Frank leads capital markets and execution at BAI, LP outreach and diligence, fundraising pipeline management, and broker/venue interfaces that translate research into efficient trading. He is a Business student at Huron University (Western) with Ivey Advanced Entry Opportunity status and a varsity rower. He has worked in Equity Markets at TMX Group as a quantitative analyst conducting market structure research and focusing on product innovation and trading rules, and he helped lead communications and partnerships for student investment organizations at Western University.",
