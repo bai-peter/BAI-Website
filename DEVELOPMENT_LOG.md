@@ -681,13 +681,14 @@ Next steps:
   - `vite.config.ts` target confirmed `'es2020'`.
   - Pushing to `main` to trigger GitHub Pages deploy.
 
-### Update — 2025-09-23 (Team profiles and dev-only testing)
+### Update — 2025-09-23 (Team profiles, footer anchors, and dev-only testing)
 
 - Changes (dev and prod-safe UI polish):
   - Team section: larger portraits, two-line clamp on name/role, founders listed first.
   - Role titles shortened and normalized to hedge-fund style.
   - Education lines normalized with short forms (Ivey/Western, Waterloo, Laurier, UC Davis, USTC).
   - Metrics updated: Universities Represented → 5; Sectors Worked (Collective) → 10.
+  - Footer anchors now use the same precise header-offset scrolling as top navigation.
   - Modal logos sized to match portrait width across breakpoints.
 - Dev-only (not visible in production):
   - Added Zilong Bai test profile with UC Davis and USTC logos; profile currently hidden from render.

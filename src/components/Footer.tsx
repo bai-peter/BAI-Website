@@ -11,18 +11,18 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className }) => {
   const scrollToSection = (id: string) => {
     if (id === 'home') {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop - 120,
-          behavior: 'smooth'
-        });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const element = document.getElementById(id);
+    const headerEl = document.querySelector('header');
+    const headerHeight = headerEl instanceof HTMLElement ? headerEl.offsetHeight : 120;
+    if (element) {
+      const heading = element.querySelector('h1, h2, h3, h4');
+      const targetEl = (heading as HTMLElement) || element;
+      const rect = targetEl.getBoundingClientRect();
+      const absoluteTop = window.scrollY + rect.top;
+      window.scrollTo({ top: absoluteTop - headerHeight - 16, behavior: 'smooth' });
     }
   };
 
