@@ -21,9 +21,9 @@ const Community: React.FC<CommunityProps> = ({ className }) => {
           
           <FadeIn delay={100}>
             <div className="text-center">
-              <div className="bg-white border border-border p-12 rounded-2xl inline-block shadow-lg hover-lift">
-                <div className="w-20 h-20 bg-bai-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
-                  <div className="w-10 h-10 bg-bai-primary rounded-full"></div>
+              <div className="bg-card border border-border p-12 rounded-2xl inline-block shadow-lg hover-lift relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
+                <div className="w-20 h-20 bg-bai-primary rounded-2xl flex items-center justify-center mx-auto mb-8">
+                  <div className="w-10 h-10 bg-white rounded-full"></div>
                 </div>
                 <h3 className="text-3xl font-semibold mb-6 text-foreground">Get In Touch</h3>
                 <p className="text-2xl text-muted-foreground mb-8 text-balance font-normal">

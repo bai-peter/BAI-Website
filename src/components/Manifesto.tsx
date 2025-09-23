@@ -9,11 +9,11 @@ interface ManifestoProps {
 
 const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
   return (
-    <section id="what-we-do" className={cn('section-spacing bg-card relative z-10', className)}>
+    <section id="what-we-do" className={cn('section-spacing bg-card', className)}>
       {/* Mellow geometric background */}
       {/* Background chart is rendered globally in Index.tsx */}
 
-      <div className="container mx-auto container-padding relative z-10">
+      <div className="container mx-auto container-padding">
         <div className="max-w-5xl mx-auto content-spacing">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center text-foreground text-balance">
@@ -29,9 +29,9 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             <FadeIn delay={150}>
-              <div className="card-interactive p-10 h-full flex flex-col hover-lift">
-                <div className="w-16 h-16 bg-bai-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-bai-primary/20 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-bai-primary rounded-full"></div>
+              <div className="card-interactive p-10 h-full flex flex-col hover-lift relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
+                <div className="w-16 h-16 bg-bai-primary rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-white rounded-full"></div>
                 </div>
                 <h3 className="text-3xl font-semibold mb-6 text-foreground">Systematic Research</h3>
                 <p className="text-lg leading-relaxed text-muted-foreground flex-grow">
@@ -41,9 +41,9 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
             </FadeIn>
             
             <FadeIn delay={200}>
-              <div className="card-interactive p-10 h-full flex flex-col hover-lift">
-                <div className="w-16 h-16 bg-bai-accent/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-bai-accent/20 transition-colors duration-300">
-                  <div className="w-8 h-8 bg-bai-accent rounded-full"></div>
+              <div className="card-interactive p-10 h-full flex flex-col hover-lift relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
+                <div className="w-16 h-16 bg-bai-accent rounded-2xl flex items-center justify-center mb-8 transition-colors duration-300">
+                  <div className="w-8 h-8 bg-white rounded-full"></div>
                 </div>
                 <h3 className="text-3xl font-semibold mb-6 text-foreground">Automated Execution</h3>
                 <p className="text-lg leading-relaxed text-muted-foreground flex-grow">
@@ -55,30 +55,30 @@ const Manifesto: React.FC<ManifestoProps> = ({ className }) => {
           
           <FadeIn delay={250}>
             <div className="grid md:grid-cols-4 gap-12 text-center">
-              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
-                <div className="w-20 h-20 bg-bai-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-primary/20 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-bai-primary rounded-full"></div>
+              <div className="group hover-lift rounded-2xl p-6 bg-card transition-colors relative z-20">
+                <div className="w-20 h-20 bg-bai-primary rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-white rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Macro Analysis</h4>
                 <p className="text-lg text-muted-foreground">Global market regime identification</p>
               </div>
-              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
-                <div className="w-20 h-20 bg-bai-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-accent/20 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-bai-accent rounded-full"></div>
+              <div className="group hover-lift rounded-2xl p-6 bg-card transition-colors relative z-20">
+                <div className="w-20 h-20 bg-bai-accent rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-white rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Signal Generation</h4>
                 <p className="text-lg text-muted-foreground">Multi-factor model development</p>
               </div>
-              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
-                <div className="w-20 h-20 bg-bai-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-primary/20 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-bai-primary rounded-full"></div>
+              <div className="group hover-lift rounded-2xl p-6 bg-card transition-colors relative z-20">
+                <div className="w-20 h-20 bg-bai-primary rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-white rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Portfolio Construction</h4>
                 <p className="text-lg text-muted-foreground">Risk-optimized allocation</p>
               </div>
-              <div className="group hover-lift rounded-2xl p-6 hover:bg-muted/20 transition-colors">
-                <div className="w-20 h-20 bg-bai-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-bai-accent/20 transition-colors duration-300">
-                  <div className="w-10 h-10 bg-bai-accent rounded-full"></div>
+              <div className="group hover-lift rounded-2xl p-6 bg-card transition-colors relative z-20">
+                <div className="w-20 h-20 bg-bai-accent rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300">
+                  <div className="w-10 h-10 bg-white rounded-full"></div>
                 </div>
                 <h4 className="text-2xl font-semibold mb-4 text-foreground">Adaptive Learning</h4>
                 <p className="text-lg text-muted-foreground">Continuous model refinement</p>

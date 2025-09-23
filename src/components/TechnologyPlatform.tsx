@@ -51,11 +51,11 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
   ];
 
   return (
-    <section id="technology" className={cn('section-spacing bg-card relative z-10', className)}>
+    <section id="technology" className={cn('section-spacing bg-card', className)}>
       {/* Mellow geometric background */}
       {/* Background chart is rendered globally in Index.tsx */}
       
-      <div className="container mx-auto container-padding relative z-10">
+      <div className="container mx-auto container-padding">
         <div className="max-w-5xl mx-auto content-spacing">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-sans font-bold mb-12 text-center text-foreground text-balance">
@@ -73,10 +73,10 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {capabilities.map((capability, index) => (
             <FadeIn key={index} delay={150 + index * 50}>
-              <Card className="card-interactive h-full">
+              <Card className="card-interactive h-full relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
                 <CardContent className="p-8 h-full flex flex-col">
                   <div className="flex items-start space-x-6 flex-grow">
-                    <div className="w-16 h-16 bg-bai-primary/20 rounded-lg flex items-center justify-center text-2xl group-hover:bg-bai-primary/30 transition-colors duration-300 flex-shrink-0">
+                    <div className="w-16 h-16 bg-bai-primary rounded-lg flex items-center justify-center text-2xl transition-colors duration-300 flex-shrink-0">
                       {capability.icon}
                     </div>
                     <div className="flex-1">
@@ -94,8 +94,8 @@ const TechnologyPlatform: React.FC<TechnologyPlatformProps> = ({ className }) =>
           <div className="bg-card border border-border p-8 rounded-lg">
             <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Core Systems</h3>
             <div className="grid md:grid-cols-2 gap-6">
-					{infrastructure.map((item, index) => (
-						<div key={index} className="group p-6 bg-card border border-border rounded-lg transition-colors duration-300 hover:bg-card">
+                    {infrastructure.map((item, index) => (
+                        <div key={index} className="group p-6 bg-card border border-border rounded-lg transition-colors duration-300 hover:bg-card relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
 							<h4 className="text-xl md:text-2xl font-semibold mb-2 text-foreground">{item.title}</h4>
 							<p className="text-base md:text-lg text-foreground/90 leading-relaxed">{item.description}</p>
 						</div>

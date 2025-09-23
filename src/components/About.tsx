@@ -62,7 +62,7 @@ const About: React.FC<AboutProps> = ({ className }) => {
             <FadeIn delay={200}>
               <div className="bg-card border border-border p-8 space-y-8 rounded-lg h-full flex flex-col">
                 <div className="text-center">
-                  <div className="w-28 h-28 bg-gradient-to-br from-bai-gold/20 to-bai-navy/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-28 h-28 bg-gradient-to-br from-bai-gold to-bai-navy rounded-full flex items-center justify-center mx-auto mb-6">
                     <img 
                       src="/assets/850bdd41-c8a0-41b8-b1a0-fa05f418aabb.png" 
                       alt="BAI Logo"
@@ -93,22 +93,22 @@ const About: React.FC<AboutProps> = ({ className }) => {
                 
                 <div className="space-y-6">
                   <div className="group">
-                    <div className="w-12 h-12 bg-bai-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-bai-primary/30 transition-colors duration-300">
-                      <div className="w-6 h-6 bg-bai-primary rounded-full"></div>
+                    <div className="w-12 h-12 bg-bai-primary rounded-lg flex items-center justify-center mb-4 transition-colors duration-300">
+                      <div className="w-6 h-6 bg-white rounded-full"></div>
                     </div>
                     <h5 className="text-lg font-semibold text-foreground mb-2">Multi-Agent AI System</h5>
                     <p className="text-small text-muted-foreground">Specialized agents for macro, sector, signal, and execution analysis</p>
                   </div>
                   <div className="group">
-                    <div className="w-12 h-12 bg-bai-accent/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-bai-accent/30 transition-colors duration-300">
-                      <div className="w-6 h-6 bg-bai-accent rounded-full"></div>
+                    <div className="w-12 h-12 bg-bai-accent rounded-lg flex items-center justify-center mb-4 transition-colors duration-300">
+                      <div className="w-6 h-6 bg-white rounded-full"></div>
                     </div>
                     <h5 className="text-lg font-semibold text-foreground mb-2">Zero Human Intervention</h5>
                     <p className="text-small text-muted-foreground">Fully automated research, analysis, and execution</p>
                   </div>
                   <div className="group">
-                    <div className="w-12 h-12 bg-bai-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-bai-primary/30 transition-colors duration-300">
-                      <div className="w-6 h-6 bg-bai-primary rounded-full"></div>
+                    <div className="w-12 h-12 bg-bai-primary rounded-lg flex items-center justify-center mb-4 transition-colors duration-300">
+                      <div className="w-6 h-6 bg-white rounded-full"></div>
                     </div>
                     <h5 className="text-lg font-semibold text-foreground mb-2">Continuous Learning</h5>
                     <p className="text-small text-muted-foreground">AI agents that adapt and improve with market feedback</p>

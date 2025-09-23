@@ -22,7 +22,7 @@ const BackgroundChart: React.FC<BackgroundChartProps> = () => {
     spawnedNext: boolean;
   };
 
-  const maxConcurrentLines = 10;
+  const maxConcurrentLines = 6;
   const nextSpawnAtRef = useRef(0);
   const spawnLine = (indexHint: number = 0): LineState => {
     const seed = Math.floor(Math.random() * 1_000_000);
@@ -137,7 +137,7 @@ const BackgroundChart: React.FC<BackgroundChartProps> = () => {
         viewBox="0 0 1000 1000"
         preserveAspectRatio="none"
         aria-hidden
-        style={{ mixBlendMode: 'screen' }}
+        style={{ mixBlendMode: 'normal' }}
       >
         <defs>
           <linearGradient id="neonLine" x1="0%" y1="0%" x2="100%" y2="0%">

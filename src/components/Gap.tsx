@@ -65,10 +65,10 @@ const Gap: React.FC<GapProps> = ({ className }) => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {strategies.map((strategy, index) => (
             <FadeIn key={index} delay={150 + index * 50}>
-              <Card className="card-interactive h-full">
+              <Card className="card-interactive h-full relative z-20" style={{ backgroundColor: 'hsl(var(--card))' }}>
                 <CardContent className="p-8 h-full flex flex-col">
-                  <div className="w-12 h-12 bg-bai-primary/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-bai-primary/30 transition-colors duration-300">
-                    <div className="w-6 h-6 bg-bai-primary rounded-full"></div>
+                  <div className="w-12 h-12 bg-bai-primary rounded-lg flex items-center justify-center mb-6 transition-colors duration-300">
+                    <div className="w-6 h-6 bg-white rounded-full"></div>
                   </div>
                   <h3 className="text-2xl font-semibold mb-4 text-foreground">{strategy.title}</h3>
                   <p className="text-readable mb-4 flex-grow">{strategy.description}</p>
@@ -84,7 +84,7 @@ const Gap: React.FC<GapProps> = ({ className }) => {
             <h3 className="text-2xl font-semibold mb-8 text-center text-foreground">Technical Infrastructure</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {infrastructure.map((item, index) => (
-                <div key={index} className="group text-center p-6 hover:bg-muted/20 rounded-lg transition-colors duration-300 h-full flex flex-col justify-center">
+                <div key={index} className="group text-center p-6 bg-card rounded-lg transition-colors duration-300 h-full flex flex-col justify-center relative z-20">
                   <div className="text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
                   <p className="text-sm text-muted-foreground font-medium">{item.title}</p>
                 </div>

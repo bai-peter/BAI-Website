@@ -1,4 +1,71 @@
+### Repo Sync — 2025-09-23 12:13:43Z (UTC)
+
+- Actions:
+  - Fetched all remotes and hard reset local `main` to `origin/main`.
+  - Removed untracked files/directories via `git clean -fdx` for a pristine working tree.
+  - Verified `vite.config.ts` build `target: 'es2020'` per deployment rule.
+- Files modified:
+  - None committed; local `node_modules/` removed by clean.
+- Issues encountered:
+  - None.
+- Current status:
+  - Local workspace exactly matches `origin/main`.
+- Next steps:
+  - Reinstall dependencies and run dev server if continuing work: `npm i && npm run dev`.
+
 - Hotfix: Remove legacy SPA redirect loop
+
+### UI Update — Make feature cards fully opaque (2025-09-23)
+
+- Changes:
+  - Replaced translucent backgrounds (`/10`, `/20`) with solid brand fills for icon containers.
+  - Removed `hover:bg-muted/20` from feature cards; set card surface to `bg-card` for opaque base.
+  - Used white inner badge circles for contrast against solid brand squares.
+- Files modified:
+  - `src/components/Manifesto.tsx`
+  - `src/components/Gap.tsx`
+  - `src/components/Community.tsx`
+- Result:
+  - No bleed-through from background animation; cards are completely opaque.
+
+### Layering Fix — Move pulse layer behind content (2025-09-23)
+
+- Change:
+  - Updated `.pulse-layer` z-index from 50 to 1 in `src/index.css` to ensure it renders behind all content and opaque cards.
+- Result:
+  - Eliminates background line bleed-through over feature cards while keeping animation visible.
+
+### Layering Adjustment — Pulse above section bg but below cards (2025-09-23)
+
+- Changes:
+  - Set `.pulse-layer` to `z-index: 15` to sit above section backgrounds.
+  - Removed `z-10` from Manifesto section/container to avoid covering pulse.
+  - Elevated cards/tiles with `relative z-20` to ensure they sit above the pulse layer.
+- Files modified:
+  - `src/index.css`
+  - `src/components/Manifesto.tsx`
+  - `src/components/Gap.tsx`
+  - `src/components/Community.tsx`
+- Result:
+  - Pulse lines render above background but do not bleed over cards.
+
+### Performance Tweak — Limit concurrent background lines to 6 (2025-09-23)
+
+- Change:
+  - Reduced `maxConcurrentLines` from 10 to 6 in `src/components/BackgroundChart.tsx`.
+- Result:
+  - Lower visual density and GPU usage while keeping the effect visible.
+
+### Content Update — Team role titles (2025-09-23)
+
+- Changes:
+  - Updated roles in `src/components/FoundersInSearch.tsx` to concise, technical titles:
+    - Peter: Head of Investment Research
+    - Muhammad: Head of Systems Engineering
+    - Josephina: Head of Research Partnerships & Operations
+    - Frank: Head of Capital Markets & Execution
+- Result:
+  - Titles are precise, investor-facing, and aligned with responsibilities.
 
 - Changes:
   - Deleted spa-github-pages redirect script from `index.html` to prevent recursive `/dist` URL query loops.
@@ -497,3 +564,53 @@ Next steps:
 **Last Updated**: 2025-01-19  
 **Next Review**: 2025-01-26  
 **Status**: 🚀 ACTIVE DEVELOPMENT 
+
+### Session — 2025-09-23
+
+- Summary:
+  - Fixed background line bleed-through comprehensively. Kept cards opaque, removed section-wide masks, and finally placed the pulse layer behind all content for guaranteed occlusion.
+  - Standardized feature cards to fully opaque across sections (Manifesto, Gap, TechnologyPlatform, Community, Team).
+  - Introduced and later removed `.occlude-pulse` after testing; settled on simpler layering with opaque cards and pulse at lowest z.
+  - Tightened footer spacing.
+  - Limited concurrent background lines from 10 → 6.
+  - Updated team roles to concise one-liners and enhanced bios with role responsibilities.
+
+- Layering & Visuals:
+  - Set `.pulse-layer` z-index to 0 (behind all content) in `src/index.css`.
+  - Removed `.occlude-pulse` utility and all usages from grids/panels.
+  - Kept per-card opacity via explicit `backgroundColor: hsl(var(--card))` and card classes.
+
+- Opaque Feature Cards:
+  - Manifesto: replaced translucent backgrounds; grid cards use solid brand icon squares; feature tiles `bg-card`.
+  - Gap: strategies and infra tiles opaque; removed hover translucency.
+  - TechnologyPlatform: capability cards and Core Systems tiles opaque; removed group translucency.
+  - Community: contact card opaque.
+  - Team: each card individually opaque; equalized heights; truncated long names/roles.
+
+- Animated Background:
+  - BackgroundChart: `mixBlendMode: normal`; maxConcurrentLines = 6.
+
+- Content Updates:
+  - Team titles: Head of Investments; Head of Systems Engineering; Head of Partnerships; Head of Capital Markets.
+  - Team bios: appended clear responsibility sentences; preserved existing facts and tone.
+
+- Spacing:
+  - Footer: `py-8 md:py-12`, inner `pt-4 md:pt-6`.
+
+- Files modified:
+  - `src/index.css`
+  - `src/components/Manifesto.tsx`
+  - `src/components/Gap.tsx`
+  - `src/components/TechnologyPlatform.tsx`
+  - `src/components/Community.tsx`
+  - `src/components/FoundersInSearch.tsx`
+  - `src/components/BackgroundChart.tsx`
+  - `src/components/Footer.tsx`
+
+- Issues resolved:
+  - Background line bleed-through over cards; fixed via layering and opacity.
+  - Inconsistent card heights; fixed with layout tweaks and truncation.
+
+- Deployment notes:
+  - `vite.config.ts` target verified as 'es2020'.
+  - Safe to deploy to GitHub Pages.
