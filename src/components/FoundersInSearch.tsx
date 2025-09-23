@@ -12,7 +12,7 @@ interface FoundersInSearchProps {
 const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const teamMembers = [
+  const baseMembers = [
     {
       name: "Peter Bai",
       role: "Head of Investments",
@@ -55,6 +55,34 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
   ];
+
+  // Dev-only profile (not shown in production): Zilong Bai
+  const devOnlyMembers = [
+    {
+      name: "Zilong Bai",
+      role: "Research Associate",
+      degree: "Ph.D., Computer Science (UC Davis); M.Eng., Information & Communication Engineering (USTC)",
+      logoPrimary: "/assets/Cornell Medicine Logo.png",
+      logoSecondary: "/assets/UC Davis Logo.png",
+      logoTertiary: "/assets/university of science and technology of china logo.jpeg",
+      fullDescription:
+        "Research Associate at Weill Cornell Medicine focused on health informatics using data mining, machine learning, and AI. First‑author publications in top conferences and journals; experienced in lecturing, mentoring, and collaborative, multidisciplinary research.",
+      image: "/assets/Muhammad HeadShot.png",
+      linkedin: "#",
+    },
+  ];
+
+  const teamMembers: Array<{
+    name: string;
+    role: string;
+    degree: string;
+    logoPrimary: string;
+    logoSecondary?: string;
+    logoTertiary?: string;
+    fullDescription: string;
+    image: string;
+    linkedin: string;
+  }> = import.meta.env.DEV ? [...baseMembers, ...devOnlyMembers] : baseMembers as any;
 
   const toggleExpanded = (index: number) => {
     setExpandedIndex(prev => (prev === index ? null : index));
@@ -160,6 +188,13 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                       {member.logoSecondary && (
                         <img
                           src={member.logoSecondary}
+                          alt="Additional school logo"
+                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90 mx-auto"
+                        />
+                      )}
+                      {member.logoTertiary && (
+                        <img
+                          src={member.logoTertiary}
                           alt="Additional school logo"
                           className="w-28 sm:w-32 md:w-36 h-auto opacity-90 mx-auto"
                         />
