@@ -56,22 +56,6 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     },
   ];
 
-  // Dev-only profile (not shown in production): Zilong Bai
-  const devOnlyMembers = [
-    {
-      name: "Zilong Bai",
-      role: "Research Associate",
-      degree: "Ph.D., Computer Science (UC Davis); M.Eng., Information & Communication Engineering (USTC)",
-      logoPrimary: "/assets/Cornell Medicine Logo.png",
-      logoSecondary: "/assets/UC Davis Logo.png",
-      logoTertiary: "/assets/university of science and technology of china logo.jpeg",
-      fullDescription:
-        "Research Associate at Weill Cornell Medicine focused on health informatics using data mining, machine learning, and AI. First‑author publications in top conferences and journals; experienced in lecturing, mentoring, and collaborative, multidisciplinary research.",
-      image: "/assets/Muhammad HeadShot.png",
-      linkedin: "#",
-    },
-  ];
-
   const teamMembers: Array<{
     name: string;
     role: string;
@@ -82,7 +66,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     fullDescription: string;
     image: string;
     linkedin: string;
-  }> = import.meta.env.DEV ? [...baseMembers, ...devOnlyMembers] : baseMembers as any;
+  }> = baseMembers as any;
 
   const toggleExpanded = (index: number) => {
     setExpandedIndex(prev => (prev === index ? null : index));
