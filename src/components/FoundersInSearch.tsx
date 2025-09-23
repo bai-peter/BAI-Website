@@ -17,7 +17,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       role: "Founder & Managing Partner",
       fullDescription:
         "Peter is an Ivey HBA student at Western University and the architect of BAI's multi-agent AI research system. He has worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a $13 billion AUM portfolio. Previously, he was an Equity Markets quant at TMX Group, focused on trading infrastructure and technology. He also worked in venture capital at HCS Capital, focusing on fintech and insurtech co-investments.",
-      image: "/assets/BAI Emblem.png",
+      image: "/assets/Peter HeadShot.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
     {
@@ -25,7 +25,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       role: "Head of Systems Engineering",
       fullDescription:
         "Muhammad is a Computer Science student at the University of Waterloo and leads the technical implementation of BAI's multi-agent AI platform. He is a Founding Machine Learning Engineer at Boardy AI, where he builds production machine learning systems for digital human interaction. He has previously built machine learning pipelines at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous and path planning at MIT-PITT-RW.",
-      image: "/assets/BAI Emblem.png",
+      image: "/assets/Muhammad HeadShot.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
     {
@@ -33,7 +33,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       role: "Head of Industry Research",
       fullDescription:
         "Josephina is pursuing a dual Computer Science and Business Administration program at the University of Waterloo and Wilfrid Laurier University and is a Schulich Leader Scholar. She leads BAI's industry research and sector analysis, working as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk, developing models for electronic trading. She also worked as a venture capital analyst at Render Capital, evaluating early-stage technology investments.",
-      image: "/assets/BAI Emblem.png",
+      image: "/assets/Josephina HeadShot.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
     {
@@ -41,7 +41,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
       role: "Head of Capital & Partnerships",
       fullDescription:
         "Frank is a Business student at Huron University (Western) with Ivey Advanced Entry Opportunity status and a varsity rower. He leads BAI's capital and partnerships strategy, having worked in Equity Markets at TMX Group as a quantitative analyst, conducting market structure research and focusing on product innovation and trading rules. He also helped lead communications and partnerships for student investment organizations at Western University.",
-      image: "/assets/BAI Emblem.png",
+      image: "/assets/Frank HeadShot.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
   ];
@@ -100,11 +100,11 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                 onClick={() => toggleExpanded(index)}
               >
                 <CardContent className="p-6 text-center h-full flex flex-col">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
+                  <div className="w-40 h-40 mx-auto mb-4 bg-gradient-to-br from-bai-primary/20 to-bai-accent/20 rounded-full flex items-center justify-center group-hover:from-bai-primary/30 group-hover:to-bai-accent/30 transition-all duration-300">
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-16 h-16 object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w-36 h-36 object-cover rounded-full opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">{member.name}</h3>
