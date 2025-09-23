@@ -154,14 +154,14 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                         <img
                           src={member.logoPrimary}
                           alt="School logo"
-                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90"
+                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90 mx-auto"
                         />
                       )}
                       {member.logoSecondary && (
                         <img
                           src={member.logoSecondary}
                           alt="Additional school logo"
-                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90"
+                          className="w-28 sm:w-32 md:w-36 h-auto opacity-90 mx-auto"
                         />
                       )}
                     </div>
