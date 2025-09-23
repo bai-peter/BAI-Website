@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import FadeIn from './animations/FadeIn';
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 interface FoundersInSearchProps {
   className?: string;
@@ -15,32 +16,41 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
     {
       name: "Peter Bai",
       role: "Head of Investments",
+      degree: "B.A., Honors Business Administration (HBA)",
+      logoPrimary: "/assets/Ivey Logo.jpg",
       fullDescription:
-        "Peter is an Ivey HBA student at Western University and the architect of BAI's multi‑agent AI research system. He previously worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a $13B AUM portfolio. Earlier, he was an Equity Markets quant at TMX Group focused on trading infrastructure and technology, and he spent time in venture capital at HCS Capital evaluating fintech and insurtech co‑investments. At BAI, he leads investment research—setting the research roadmap, designing model specifications, integrating signals across regimes, and owning portfolio construction and risk oversight.",
+        "Peter leads investment research at BAI: setting the research roadmap, designing model specifications, integrating signals across regimes, and owning portfolio construction and risk oversight. He is an Ivey HBA student at Western University and the architect of BAI's multi‑agent AI research system. He previously worked as a quant developer on the Macro Trading Desk at University Pension Plan Ontario, covering FX, equity TRS, and repo within a $13B AUM portfolio. Earlier, he was an Equity Markets quant at TMX Group focused on trading infrastructure and technology, and he spent time in venture capital at HCS Capital evaluating fintech and insurtech co‑investments.",
       image: "/assets/Peter HeadShot.png",
       linkedin: "https://www.linkedin.com/in/peter-bai/",
     },
     {
       name: "Muhammad Awan",
       role: "Head of Systems Engineering",
+      degree: "B.Sc., Computer Science",
+      logoPrimary: "/assets/Waterloo Logo.jpeg",
       fullDescription:
-        "Muhammad is a Computer Science student at the University of Waterloo and leads the technical implementation of BAI's multi‑agent AI platform. He is a Founding Machine Learning Engineer at Boardy AI, building production ML systems for digital human interaction. He previously built ML pipelines at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous and path planning at MIT‑PITT‑RW. At BAI, he owns the research platform—data ingestion and pipelines, training/evaluation infrastructure, orchestration, and reliable deployment of agents into production.",
+        "Muhammad leads systems engineering at BAI, owning the research platform: data ingestion and pipelines, training/evaluation infrastructure, orchestration, and reliable deployment of agents into production. He is a Computer Science student at the University of Waterloo and a Founding Machine Learning Engineer at Boardy AI, building production ML systems for digital human interaction. He previously built ML pipelines at UTEX Scientific Instruments and contributed to autonomous vehicle perception at WATonomous and path planning at MIT‑PITT‑RW.",
       image: "/assets/Muhammad HeadShot.png",
       linkedin: "https://www.linkedin.com/in/muhammad-awan0/?originalSubdomain=ca",
     },
     {
       name: "Josephina Kim",
       role: "Head of Partnerships",
+      degree: "B.Sc., Computer Science & B.B.A., Business Administration",
+      logoPrimary: "/assets/Waterloo Logo.jpeg",
+      logoSecondary: "/assets/Laurier Logo.png",
       fullDescription:
-        "Josephina is pursuing a dual Computer Science and Business Administration program at the University of Waterloo and Wilfrid Laurier University and is a Schulich Leader Scholar. She leads BAI's industry research and sector analysis, having worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk developing models for electronic trading, and as a venture capital analyst at Render Capital evaluating early‑stage technology investments. At BAI, she drives research partnerships and operations—managing data/vendor relationships, university and industry outreach, events, and the day‑to‑day processes that keep research execution running smoothly.",
+        "Josephina leads research partnerships and operations at BAI, managing data/vendor relationships, university and industry outreach, events, and the day‑to‑day processes that keep research execution running smoothly. She is pursuing a dual Computer Science and Business Administration program at the University of Waterloo and Wilfrid Laurier University and is a Schulich Leader Scholar. She leads BAI's industry research and sector analysis, having worked as a quantitative analyst on BMO Capital Markets' Electronic Cash Equities desk developing models for electronic trading, and as a venture capital analyst at Render Capital evaluating early‑stage technology investments.",
       image: "/assets/Josephina HeadShot.png",
       linkedin: "https://www.linkedin.com/in/josephina-kim/?originalSubdomain=ca",
     },
     {
       name: "Frank Zou",
       role: "Head of Capital Markets",
+      degree: "B.MOS, Finance",
+      logoPrimary: "/assets/Huron Logo.png",
       fullDescription:
-        "Frank is a Business student at Huron University (Western) with Ivey Advanced Entry Opportunity status and a varsity rower. He leads BAI's capital and partnerships strategy, having worked in Equity Markets at TMX Group as a quantitative analyst conducting market structure research and focusing on product innovation and trading rules. He also helped lead communications and partnerships for student investment organizations at Western University. At BAI, he focuses on capital markets and execution—LP outreach and diligence, fundraising pipeline management, and broker/venue interfaces that translate research into efficient trading.",
+        "Frank leads capital markets and execution at BAI, LP outreach and diligence, fundraising pipeline management, and broker/venue interfaces that translate research into efficient trading. He is a Business student at Huron University (Western) with Ivey Advanced Entry Opportunity status and a varsity rower. He has worked in Equity Markets at TMX Group as a quantitative analyst conducting market structure research and focusing on product innovation and trading rules, and he helped lead communications and partnerships for student investment organizations at Western University.",
       image: "/assets/Frank HeadShot.png",
       linkedin: "https://www.linkedin.com/in/fzou26/?originalSubdomain=ca",
     },
@@ -70,20 +80,20 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
           <FadeIn delay={200}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-16">
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-2">4</div>
-                <div className="text-sm text-muted-foreground">Founding Team</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">$13B+</div>
+                <div className="text-sm text-muted-foreground">Combined AUM Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Advanced Degrees</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">10</div>
+                <div className="text-sm text-muted-foreground">Sectors Worked (Collective)</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">4</div>
+                <div className="text-sm text-muted-foreground">Research Publications (YTD)</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-bai-primary mb-2">3</div>
-                <div className="text-sm text-muted-foreground">Top Universities</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-bai-primary mb-2">$13B+</div>
-                <div className="text-sm text-muted-foreground">Combined AUM Experience</div>
+                <div className="text-sm text-muted-foreground">Universities Represented</div>
               </div>
             </div>
           </FadeIn>
@@ -94,13 +104,13 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
             <FadeIn key={index} delay={150 + index * 100} className="relative z-20">
 				<Card 
                 className={cn(
-                        "card-interactive relative z-20",
-                        expandedIndex === index ? "shadow-2xl bg-card" : ""
+                  "card-interactive relative z-20",
+                  expandedIndex === index ? "shadow-2xl bg-card" : ""
                 )}
                 style={{ backgroundColor: 'hsl(var(--card))' }}
                 onClick={() => toggleExpanded(index)}
               >
-                <CardContent className="p-6 text-center flex flex-col" style={{ backgroundColor: 'hsl(var(--card))' }}>
+                <CardContent className="p-6 text-left flex flex-col" style={{ backgroundColor: 'hsl(var(--card))' }}>
                   <div className="w-40 h-40 mx-auto mb-4 bg-gradient-to-br from-bai-primary to-bai-accent rounded-full flex items-center justify-center transition-all duration-300">
                     <img 
                       src={member.image} 
@@ -108,8 +118,8 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                       className="w-36 h-36 object-cover rounded-full opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground truncate">{member.name}</h3>
-                  <p className="text-muted-foreground font-medium mb-4 text-sm flex-grow truncate">{member.role}</p>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground truncate text-center">{member.name}</h3>
+                  <p className="text-muted-foreground font-medium mb-4 text-sm flex-grow truncate text-center">{member.role}</p>
                   
                   <div className="flex items-center justify-center gap-3 mt-auto mb-4">
                     <a
@@ -123,19 +133,51 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                     </a>
                     <span className="text-muted-foreground">•</span>
 						<span className="text-xs text-muted-foreground">
-							{expandedIndex === index ? "Click to close" : "Learn More"}
+                            {expandedIndex === index ? "Click to close" : "Learn More"}
                     </span>
                   </div>
+                </CardContent>
+              </Card>
 
-					{expandedIndex === index && (
-                    <div className="mt-4 pt-4 border-t border-border">
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+              <Dialog open={expandedIndex === index} onOpenChange={(open) => setExpandedIndex(open ? index : null)}>
+                <DialogContent className="max-w-3xl bg-white border border-border p-8">
+                  <div className="flex items-start gap-6">
+                    <div className="flex flex-col items-center gap-3 flex-shrink-0">
+                      <div className="w-40 h-40 rounded-full bg-gradient-to-br from-bai-primary to-bai-accent flex items-center justify-center">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-36 h-36 object-cover rounded-full"
+                        />
+                      </div>
+                      {member.logoPrimary && (
+                        <img
+                          src={member.logoPrimary}
+                          alt="School logo"
+                          className="w-36 h-auto opacity-90"
+                        />
+                      )}
+                      {member.logoSecondary && (
+                        <img
+                          src={member.logoSecondary}
+                          alt="Additional school logo"
+                          className="w-36 h-auto opacity-90"
+                        />
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-semibold text-foreground mb-1">{member.name}</h3>
+                      <p className="text-lg text-muted-foreground mb-1">{member.role}</p>
+                      {member.degree && (
+                        <p className="text-sm text-muted-foreground mb-4">{member.degree}</p>
+                      )}
+                      <p className="text-base text-muted-foreground leading-relaxed">
                         {member.fullDescription}
                       </p>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </FadeIn>
           ))}
         </div>

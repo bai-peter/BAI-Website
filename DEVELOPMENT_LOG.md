@@ -606,10 +606,22 @@ Next steps:
   - `src/components/FoundersInSearch.tsx`
   - `src/components/BackgroundChart.tsx`
   - `src/components/Footer.tsx`
+  - `src/components/About.tsx`
 
 - Issues resolved:
   - Background line bleed-through over cards; fixed via layering and opacity.
   - Inconsistent card heights; fixed with layout tweaks and truncation.
+
+- Team modal & logos:
+  - Reworked team cards to open details in a centered modal (no downward expansion). Kept card name/title sizes unchanged.
+  - Modal background set to white for clean logo rendering.
+  - Added degree line under role; stacked school logos under portrait.
+  - Mapped logos: Peter → Ivey; Muhammad → Waterloo; Josephina → Waterloo + Laurier; Frank → Huron. Normalized logo widths to match portrait (w-36, auto height).
+  - Tightened modal typography spacing for name/role/degree; left-aligned descriptions; names/titles centered on cards.
+
+- Metrics updates:
+  - About → Key Metrics: Founded 2025, Trade win rate 93.3%, Avg return/trade +5.30%, Avg holding period 4 days.
+  - Team → Metrics tiles: $13B+ AUM experience, 10 sectors worked (collective), 4 research publications (YTD), 3 universities represented.
 
 - Deployment notes:
   - `vite.config.ts` target verified as 'es2020'.

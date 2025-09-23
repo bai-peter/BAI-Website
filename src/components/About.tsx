@@ -78,16 +78,16 @@ const About: React.FC<AboutProps> = ({ className }) => {
                     <div className="text-sm text-muted-foreground">Founded</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">$50M+</div>
-                    <div className="text-sm text-muted-foreground">Target AUM</div>
+                    <div className="text-3xl font-bold text-bai-primary mb-1">93.3%</div>
+                    <div className="text-sm text-muted-foreground">Trade Win Rate</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">10+</div>
-                    <div className="text-sm text-muted-foreground">AI Agents</div>
+                    <div className="text-3xl font-bold text-bai-primary mb-1">+5.30%</div>
+                    <div className="text-sm text-muted-foreground">Avg Return per Trade</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-bai-primary mb-1">24/7</div>
-                    <div className="text-sm text-muted-foreground">Automation</div>
+                    <div className="text-3xl font-bold text-bai-primary mb-1">4 days</div>
+                    <div className="text-sm text-muted-foreground">Avg Holding Period</div>
                   </div>
                 </div>
                 
