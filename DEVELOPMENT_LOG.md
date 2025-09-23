@@ -687,7 +687,7 @@ Next steps:
   - Team section: larger portraits, two-line clamp on name/role, founders listed first.
   - Role titles shortened and normalized to hedge-fund style.
   - Education lines normalized with short forms (Ivey/Western, Waterloo, Laurier, UC Davis, USTC).
-  - Metrics updated: Universities Represented → 6; Sectors Worked (Collective) → 11.
+  - Metrics updated: Universities Represented → 5; Sectors Worked (Collective) → 10.
   - Modal logos sized to match portrait width across breakpoints.
 - Dev-only (not visible in production):
   - Added Zilong Bai test profile with UC Davis and USTC logos; profile currently hidden from render.

@@ -132,7 +132,7 @@ const FoundersInSearch: React.FC<FoundersInSearchProps> = ({ className }) => {
                 <div className="text-sm text-muted-foreground">Combined AUM Experience</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-bai-primary mb-2">11</div>
+                <div className="text-3xl font-bold text-bai-primary mb-2">10</div>
                 <div className="text-sm text-muted-foreground">Sectors Worked (Collective)</div>
               </div>
               <div>
